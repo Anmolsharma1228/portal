@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  font-family: sans;
+  color-scheme: light dark;
+  /* background-color: rgba(0, 0, 0, 0.986); */
+    background: linear-gradient(to right, black, #0f172a, black);
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
