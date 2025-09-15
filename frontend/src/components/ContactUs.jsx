@@ -4,62 +4,68 @@ import cbg from "../assets/Images/cbg.jpg";
 import axios from "axios";
 
 const ContactUs = () => {
-  const [form, setForm] = useState({
+  const [contactdata, setcontactdata] = useState({
     name: "",
     email: "",
     number: "",
     message: "",
   });
 
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [errors, seterrors] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
 
-  // Update form values
-  const handleChange = (e) => {
+  const handlechange = (e) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+
+    if (name === "name" && value.trim().length < 3) {
+      seterrors((prev) => ({ ...prev, name: "Name must be at least 3 characters long." }));
+    } else if (name === "email" && !/^\S+@\S+\.\S+$/.test(value)) {
+      seterrors((prev) => ({ ...prev, email: "Please enter a valid email address." }));
+    } else if (name === "number" && value.length !== 10) {
+      seterrors((prev) => ({ ...prev, number: "Phone number must be exactly 10 digits." }));
+    } else if (name === "message" && value.length > 50) {
+      seterrors((prev) => ({ ...prev, message: "Message cannot exceed 50 characters." }));
+    } else {
+      seterrors((prev) => ({ ...prev, [name]: "" }));
+    }
+
+    setcontactdata({ ...contactdata, [name]: value });
   };
 
-  // Handle submit
-  const handleSubmit = async (e) => {
+  const handledata = async (e) => {
     e.preventDefault();
 
-    // Simple validation
-    if (form.name.length < 3) {
-      setError("Name must be at least 3 characters");
+    // simple validations
+    if (!contactdata.name || errors.name) {
+      alert("Please provide a valid name.");
       return;
     }
-    if (!/^\S+@\S+\.\S+$/.test(form.email)) {
-      setError("Invalid email address");
+    if (!contactdata.email || errors.email) {
+      alert("Please provide a valid email.");
       return;
     }
-    if (form.number.length !== 10) {
-      setError("Phone number must be 10 digits");
+    if (!contactdata.number || errors.number) {
+      alert("Please provide a valid number.");
       return;
     }
-    if (form.message.length > 50) {
-      setError("Message cannot exceed 50 characters");
-      return;
-    }
-
-    setError(""); // clear previous errors
-    setLoading(true);
 
     try {
       const res = await axios.post(
         "https://backendportal-763b.onrender.com/contact/contactinfo",
-        form
+        contactdata
       );
-      console.log("Success:", res.data);
+      console.log("✅ Success:", res.data);
       alert("Message sent successfully!");
 
-      // Reset form
-      setForm({ name: "", email: "", number: "", message: "" });
+      // reset form
+      setcontactdata({ name: "", email: "", number: "", message: "" });
     } catch (err) {
-      console.error("Error:", err);
-      setError("Failed to send message. Try again later.");
-    } finally {
-      setLoading(false);
+      console.error("❌ Error:", err);
+      alert("Failed to send message. Try again later.");
     }
   };
 
@@ -67,67 +73,83 @@ const ContactUs = () => {
     <Parallax
       blur={{ min: -15, max: 15 }}
       bgImage={cbg}
+      bgImageAlt="contact us background"
       strength={300}
       className="min-h-screen"
     >
-      <div className="min-h-screen flex items-center justify-center bg-black/50 px-4">
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white/90 p-6 sm:p-8 rounded-2xl shadow-2xl max-w-lg w-full space-y-4"
-        >
-          <h1 className="text-center text-3xl font-bold text-blue-600 mb-4">
-            Contact Us
-          </h1>
+      <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-black/50 py-8">
+        <h1 className="text-center text-4xl sm:text-5xl font-bold mb-10 text-yellow-400">
+          Contact Us
+        </h1>
 
-          {error && <p className="text-red-500 text-center">{error}</p>}
-
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            className="w-full border p-3 rounded-lg"
-            value={form.name}
-            onChange={handleChange}
-            required
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            className="w-full border p-3 rounded-lg"
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
-
-          <input
-            type="tel"
-            name="number"
-            placeholder="Your Number"
-            className="w-full border p-3 rounded-lg"
-            value={form.number}
-            onChange={handleChange}
-            required
-          />
-
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            className="w-full border p-3 rounded-lg h-32"
-            value={form.message}
-            onChange={handleChange}
-            required
-          />
-
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 rounded-lg font-semibold cursor-pointer"
-            disabled={loading}
+        <div className="w-full max-w-lg">
+          <form
+            onSubmit={handledata}
+            className="bg-gray-200/95 text-gray-900 p-6 sm:p-8 rounded-2xl shadow-2xl w-full space-y-4"
           >
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
+            {/* Name */}
+            <div>
+              <label className="block mb-1 font-medium">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                className="bg-white w-full border p-3 rounded-lg outline-none"
+                value={contactdata.name}
+                onChange={handlechange}
+                required
+              />
+              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block mb-1 font-medium">Your Email</label>
+              <input
+                type="email"
+                name="email"
+                className="bg-white w-full border p-3 rounded-lg outline-none"
+                value={contactdata.email}
+                onChange={handlechange}
+                required
+              />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+            </div>
+
+            {/* Number */}
+            <div>
+              <label className="block mb-1 font-medium">Your Number</label>
+              <input
+                type="tel"
+                name="number"
+                className="bg-white w-full border p-3 rounded-lg outline-none"
+                value={contactdata.number}
+                onChange={handlechange}
+                required
+              />
+              {errors.number && <p className="text-red-500 text-sm">{errors.number}</p>}
+            </div>
+
+            {/* Message */}
+            <div>
+              <label className="block mb-1 font-medium">Your Message</label>
+              <textarea
+                name="message"
+                className="bg-white w-full border p-3 rounded-lg h-32 sm:h-40 outline-none"
+                value={contactdata.message}
+                onChange={handlechange}
+                required
+              />
+              {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 rounded-lg font-semibold transition hover:opacity-90 cursor-pointer"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </Parallax>
   );
