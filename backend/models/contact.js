@@ -1,24 +1,11 @@
-//mongodb schema
 const mongoose = require("mongoose");
 
 const contactSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    // required: true
-  },
-  email: {
-    type: String,
-    // required: true
-  },
-  number: {
-    type: Number,
-    // required: true
-  },
-  message: {
-    type: String,
-    // required: true
-  },
+  name: { type: String },
+  email: { type: String },
+  number: { type: String },
+  message: { type: String },
 });
 
-const contact = mongoose.model("contactinfo", contactSchema);
-module.exports = contact;
+const Contact = mongoose.model("Contact", contactSchema);
+module.exports = Contact;
