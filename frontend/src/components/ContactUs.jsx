@@ -1,87 +1,133 @@
-import React from "react";
-import cbg from "../assets/Images/cbg.jpg";
+import React, { useState } from "react";
 import { Parallax } from "react-parallax";
+import cbg from "../assets/Images/cbg.jpg";
+import axios from "axios";
 
 const ContactUs = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  // Update form values
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  // Handle submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Simple validation
+    if (form.name.length < 3) {
+      setError("Name must be at least 3 characters");
+      return;
+    }
+    if (!/^\S+@\S+\.\S+$/.test(form.email)) {
+      setError("Invalid email address");
+      return;
+    }
+    if (form.number.length !== 10) {
+      setError("Phone number must be 10 digits");
+      return;
+    }
+    if (form.message.length > 50) {
+      setError("Message cannot exceed 50 characters");
+      return;
+    }
+
+    setError(""); // clear previous errors
+    setLoading(true);
+
+    try {
+      const res = await axios.post(
+        "https://backendportal-763b.onrender.com/contact/contactinfo",
+        form
+      );
+      console.log("Success:", res.data);
+      alert("Message sent successfully!");
+
+      // Reset form
+      setForm({ name: "", email: "", number: "", message: "" });
+    } catch (err) {
+      console.error("Error:", err);
+      setError("Failed to send message. Try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <Parallax
       blur={{ min: -15, max: 15 }}
       bgImage={cbg}
-      bgImageAlt="contact us background"
       strength={300}
       className="min-h-screen"
     >
-      {/* Overlay to make form pop */}
-      <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-black/50 py-8">
-        <h1 className="text-center text-4xl sm:text-5xl font-bold mb-10 text-yellow-400">
-          Contact Us
-        </h1>
+      <div className="min-h-screen flex items-center justify-center bg-black/50 px-4">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white/90 p-6 sm:p-8 rounded-2xl shadow-2xl max-w-lg w-full space-y-4"
+        >
+          <h1 className="text-center text-3xl font-bold text-blue-600 mb-4">
+            Contact Us
+          </h1>
 
-        <div className="w-full max-w-lg">
-          <form className="bg-gray-200/95 text-gray-900 p-6 sm:p-8 rounded-2xl shadow-2xl w-full space-y-4">
-            {/* Name */}
-            <div>
-              <label htmlFor="name" className="block mb-1 font-medium">
-                Your Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="bg-white w-full border p-3 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
-                required
-              />
-            </div>
+          {error && <p className="text-red-500 text-center">{error}</p>}
 
-            {/* Email */}
-            <div>
-              <label htmlFor="email" className="block mb-1 font-medium">
-                Your Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="bg-white w-full border p-3 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
-                required
-              />
-            </div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            className="w-full border p-3 rounded-lg"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
 
-            {/* Phone */}
-            <div>
-              <label htmlFor="tel" className="block mb-1 font-medium">
-                Your Number
-              </label>
-              <input
-                type="tel"
-                id="tel"
-                name="tel"
-                className="bg-white w-full border p-3 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
-                required
-              />
-            </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            className="w-full border p-3 rounded-lg"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
 
-            {/* Message */}
-            <div>
-              <label htmlFor="message" className="block mb-1 font-medium">
-                Your Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                className="bg-white w-full border p-3 rounded-lg h-32 sm:h-40 outline-none focus:ring-2 focus:ring-yellow-400"
-                required
-              />
-            </div>
+          <input
+            type="tel"
+            name="number"
+            placeholder="Your Number"
+            className="w-full border p-3 rounded-lg"
+            value={form.number}
+            onChange={handleChange}
+            required
+          />
 
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 rounded-lg font-semibold transition hover:opacity-90"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            className="w-full border p-3 rounded-lg h-32"
+            value={form.message}
+            onChange={handleChange}
+            required
+          />
+
+          <button
+            type="submit"
+            className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 rounded-lg font-semibold cursor-pointer"
+            disabled={loading}
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </button>
+        </form>
       </div>
     </Parallax>
   );
