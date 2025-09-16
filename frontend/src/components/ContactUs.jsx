@@ -11,61 +11,72 @@ const ContactUs = () => {
     message: "",
   });
 
-  const [errors, seterrors] = useState({
-    name: "",
-    email: "",
-    number: "",
-    message: "",
-  });
+  const [errors, seterrors] = useState({});
+  const [status, setStatus] = useState(""); // ✅ success/error message
+  const [loading, setLoading] = useState(false); // ✅ loading state
+
+  // Validation function
+  const validateField = (name, value) => {
+    switch (name) {
+      case "name":
+        if (value.trim().length < 3) return "Name must be at least 3 characters long.";
+        break;
+      case "email":
+        if (!/^\S+@\S+\.\S+$/.test(value)) return "Please enter a valid email address.";
+        break;
+      case "number":
+        if (!/^\d{10}$/.test(value)) return "Phone number must be exactly 10 digits.";
+        break;
+      case "message":
+        if (value.trim().length > 200) return "Message cannot exceed 200 characters.";
+        break;
+      default:
+        return "";
+    }
+    return "";
+  };
 
   const handlechange = (e) => {
     const { name, value } = e.target;
-
-    if (name === "name" && value.trim().length < 3) {
-      seterrors((prev) => ({ ...prev, name: "Name must be at least 3 characters long." }));
-    } else if (name === "email" && !/^\S+@\S+\.\S+$/.test(value)) {
-      seterrors((prev) => ({ ...prev, email: "Please enter a valid email address." }));
-    } else if (name === "number" && value.length !== 10) {
-      seterrors((prev) => ({ ...prev, number: "Phone number must be exactly 10 digits." }));
-    } else if (name === "message" && value.length > 50) {
-      seterrors((prev) => ({ ...prev, message: "Message cannot exceed 50 characters." }));
-    } else {
-      seterrors((prev) => ({ ...prev, [name]: "" }));
-    }
-
     setcontactdata({ ...contactdata, [name]: value });
+
+    // validate on change
+    const errorMsg = validateField(name, value);
+    seterrors((prev) => ({ ...prev, [name]: errorMsg }));
   };
 
   const handledata = async (e) => {
     e.preventDefault();
 
-    // simple validations
-    if (!contactdata.name || errors.name) {
-      alert("Please provide a valid name.");
-      return;
-    }
-    if (!contactdata.email || errors.email) {
-      alert("Please provide a valid email.");
-      return;
-    }
-    if (!contactdata.number || errors.number) {
-      alert("Please provide a valid number.");
+    // Final validation before submit
+    let newErrors = {};
+    Object.keys(contactdata).forEach((field) => {
+      const error = validateField(field, contactdata[field]);
+      if (error) newErrors[field] = error;
+    });
+
+    if (Object.keys(newErrors).length > 0) {
+      seterrors(newErrors);
       return;
     }
 
     try {
+      setLoading(true);
+      setStatus("");
+
       const res = await axios.post(
         "https://backendportal-763b.onrender.com/contact/contactinfo",
         contactdata
       );
-      console.log("✅ Success:", res.data);
-      alert("Message sent successfully!");
 
-      // reset form
-      setcontactdata({ name: "", email: "", number: "", message: "" });
+      setStatus("✅ Message sent successfully!");
+      setcontactdata({ name: "", email: "", number: "", message: "" }); // reset form
+      seterrors({});
     } catch (err) {
-      console.error("❌ Error:", err);
-      alert("Failed to send message. Try again later.");
+      console.error("Error:", err);
+      setStatus(err.response?.data?.msg || "❌ Failed to send message. Try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -142,11 +153,16 @@ const ContactUs = () => {
               {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
             </div>
 
+            {/* Status Message */}
+            {status && <p className="text-center font-medium">{status}</p>}
+
+            {/* Button */}
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 rounded-lg font-semibold transition hover:opacity-90 cursor-pointer"
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 rounded-lg font-semibold transition hover:opacity-90 cursor-pointer disabled:opacity-50"
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
