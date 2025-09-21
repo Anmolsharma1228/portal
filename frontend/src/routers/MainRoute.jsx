@@ -9,6 +9,7 @@ const Home = React.lazy(() => import('../pages/Home'));
 const News = React.lazy(() => import('../pages/News'));
 const Learn = React.lazy(() => import('../pages/Learn'));
 const About = React.lazy(() => import('../pages/About'));
+const Policy = React.lazy(() => import('../pages/Policy'))
 
 const MainRoute = () => {
   return (
@@ -18,9 +19,10 @@ const MainRoute = () => {
     <Suspense fallback={<Loader />}>
      <Routes>
       <Route index path='/' element={<Home/>}></Route>
-      <Route path='/About' element={<About/>}></Route>
       <Route path='/News' element={<News/>}></Route>
       <Route path='/Learn' element={<Learn/>}></Route>
+      <Route path='/About' element={<About/>}></Route>
+      <Route path='/Policy' element={<Policy/>}></Route>
      </Routes>
     </Suspense>
     <WhatsAppButton />

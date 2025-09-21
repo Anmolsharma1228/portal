@@ -73,6 +73,17 @@ export const Navbar = () => {
           >
             About Us
           </NavLink>
+
+             <NavLink
+            to="/Policy"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#FFD700]"
+                : "text-white hover:text-[#FFD700] transition-colors duration-300"
+            }
+          >
+            Policy
+          </NavLink>
         </div>
 
         {/* Call Info */}
@@ -130,6 +141,16 @@ export const Navbar = () => {
     >
       About Us
     </NavLink>
+       <NavLink
+            to="/Policy"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#FFD700]"
+                : "text-white hover:text-[#FFD700] transition-colors duration-300"
+            }
+          >
+            Policy
+          </NavLink>
   </div>
 </div>
 
