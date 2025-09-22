@@ -95,7 +95,7 @@ const ContactUs = () => {
     //   className="min-h-screen"
     // >
     <div>
-      <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-0 sm:px-6 lg:px-8 bg-black/50 py-0 sm:py-6">
+      <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-0 sm:px-6 lg:px-8 bg-white py-0 sm:py-6">
   <h1 className="text-center text-2xl sm:text-5xl font-bold mb-6 sm:mb-10 text-yellow-400">
     Contact Us
   </h1>
