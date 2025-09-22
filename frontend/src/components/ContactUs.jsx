@@ -94,7 +94,7 @@ const ContactUs = () => {
     //   strength={300}
     //   className="min-h-screen"
     // >
-   <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-white">
+   <div className="relative w-full flex flex-col items-center justify-center bg-white">
   <h1 className="text-center text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-yellow-400">
     Contact Us
   </h1>
