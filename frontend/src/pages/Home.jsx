@@ -63,13 +63,11 @@ const Home = () => {
         <Service />
 
         {/* Why Us Section */}
-        <section className="bg-neutral-950 py-12">
+        <section className="bg-neutral-950 py-10">
           <WhyUs />
         </section>
         {/* Contact Us  */}
-        <section className="bg-gray-900">
           <ContactUs />
-        </section>
       </main>
     </div>
   );
