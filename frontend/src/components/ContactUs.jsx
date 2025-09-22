@@ -87,13 +87,15 @@ const ContactUs = () => {
   };
 
   return (
-    <Parallax
-      blur={{ min: -15, max: 15 }}
-      bgImage={cbg}
-      bgImageAlt="contact us background"
-      strength={300}
-      className="min-h-screen"
-    >
+    // <Parallax
+    //   blur={{ min: -15, max: 15 }}
+    //   bgImage={cbg}
+    //   bgImageAlt="contact us background"
+    //   strength={300}
+    //   className="min-h-screen"
+    // >
+    <div>
+      
      <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-2 sm:px-6 lg:px-8 bg-black/50 py-4 sm:py-6">
   <h1 className="text-center text-3xl sm:text-5xl font-bold mb-8 sm:mb-10 text-yellow-400">
     Contact Us
@@ -174,8 +176,9 @@ const ContactUs = () => {
     </form>
   </div>
 </div>
+    </div>
 
-    </Parallax>
+    // {/* </Parallax> */}
   );
 };
 
