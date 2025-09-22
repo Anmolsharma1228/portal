@@ -94,16 +94,15 @@ const ContactUs = () => {
     //   strength={300}
     //   className="min-h-screen"
     // >
-    <div>
-      <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-white">
+   <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-white">
   <h1 className="text-center text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-yellow-400">
     Contact Us
   </h1>
 
-  <div className="w-full sm:max-w-lg px-2 sm:px-0">
+  <div className="w-full sm:max-w-lg">
     <form
       onSubmit={handledata}
-      className="backdrop-blur-md bg-white/50 text-gray-900 p-2 sm:p-6 rounded-md sm:rounded-xl shadow-xl w-full space-y-3"
+      className="backdrop-blur-md bg-white/50 text-gray-900 p-2 sm:p-6 rounded-none sm:rounded-xl shadow-xl w-full space-y-3"
     >
       {/* Name */}
       <div>
@@ -111,7 +110,7 @@ const ContactUs = () => {
         <input
           type="text"
           name="name"
-          className="bg-white w-full border p-2 rounded-md text-sm outline-none"
+          className="bg-white w-full border p-2 rounded-none sm:rounded-md text-sm outline-none"
           value={contactdata.name}
           onChange={handlechange}
           required
@@ -125,7 +124,7 @@ const ContactUs = () => {
         <input
           type="email"
           name="email"
-          className="bg-white w-full border p-2 rounded-md text-sm outline-none"
+          className="bg-white w-full border p-2 rounded-none sm:rounded-md text-sm outline-none"
           value={contactdata.email}
           onChange={handlechange}
           required
@@ -139,7 +138,7 @@ const ContactUs = () => {
         <input
           type="tel"
           name="number"
-          className="bg-white w-full border p-2 rounded-md text-sm outline-none"
+          className="bg-white w-full border p-2 rounded-none sm:rounded-md text-sm outline-none"
           value={contactdata.number}
           onChange={handlechange}
           required
@@ -152,7 +151,7 @@ const ContactUs = () => {
         <label className="block mb-1 text-sm font-medium">Your Message</label>
         <textarea
           name="message"
-          className="bg-white w-full border p-2 rounded-md text-sm h-24 outline-none"
+          className="bg-white w-full border p-2 rounded-none sm:rounded-md text-sm h-24 outline-none"
           value={contactdata.message}
           onChange={handlechange}
           required
@@ -167,7 +166,7 @@ const ContactUs = () => {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-2 rounded-md text-sm font-semibold transition hover:opacity-90 disabled:opacity-50"
+        className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-2 rounded-none sm:rounded-md text-sm font-semibold transition hover:opacity-90 disabled:opacity-50"
       >
         {loading ? "Sending..." : "Send Message"}
       </button>
@@ -175,8 +174,6 @@ const ContactUs = () => {
   </div>
 </div>
 
-     
-    </div>
 
     // {/* </Parallax> */}
   );
