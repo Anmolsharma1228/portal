@@ -19,16 +19,20 @@ const ContactUs = () => {
   const validateField = (name, value) => {
     switch (name) {
       case "name":
-        if (value.trim().length < 3) return "Name must be at least 3 characters long.";
+        if (value.trim().length < 3)
+          return "Name must be at least 3 characters long.";
         break;
       case "email":
-        if (!/^\S+@\S+\.\S+$/.test(value)) return "Please enter a valid email address.";
+        if (!/^\S+@\S+\.\S+$/.test(value))
+          return "Please enter a valid email address.";
         break;
       case "number":
-        if (!/^\d{10}$/.test(value)) return "Phone number must be exactly 10 digits.";
+        if (!/^\d{10}$/.test(value))
+          return "Phone number must be exactly 10 digits.";
         break;
       case "message":
-        if (value.trim().length > 200) return "Message cannot exceed 200 characters.";
+        if (value.trim().length > 200)
+          return "Message cannot exceed 200 characters.";
         break;
       default:
         return "";
@@ -74,7 +78,9 @@ const ContactUs = () => {
       seterrors({});
     } catch (err) {
       console.error("Error:", err);
-      setStatus(err.response?.data?.msg || "❌ Failed to send message. Try again later.");
+      setStatus(
+        err.response?.data?.msg || "❌ Failed to send message. Try again later."
+      );
     } finally {
       setLoading(false);
     }
@@ -93,74 +99,95 @@ const ContactUs = () => {
           Contact Us
         </h1>
 
-        <div className="w-full max-w-lg">
+        <div className="w-full max-w-md">
+          {" "}
+          {/* smaller width */}
           <form
             onSubmit={handledata}
-            className="bg-gray-200/95 text-gray-900 p-6 sm:p-8 rounded-2xl shadow-2xl w-full space-y-4"
+            className="backdrop-blur-md bg-white/30 text-gray-900 
+               p-4 sm:p-6 rounded-xl shadow-xl w-full space-y-3"
           >
             {/* Name */}
             <div>
-              <label className="block mb-1 font-medium">Your Name</label>
+              <label className="block mb-1 text-sm font-medium">
+                Your Name
+              </label>
               <input
                 type="text"
                 name="name"
-                className="bg-white w-full border p-3 rounded-lg outline-none"
+                className="bg-white w-full border p-2 rounded-md text-sm outline-none"
                 value={contactdata.name}
                 onChange={handlechange}
                 required
               />
-              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+              {errors.name && (
+                <p className="text-red-500 text-xs">{errors.name}</p>
+              )}
             </div>
 
             {/* Email */}
             <div>
-              <label className="block mb-1 font-medium">Your Email</label>
+              <label className="block mb-1 text-sm font-medium">
+                Your Email
+              </label>
               <input
                 type="email"
                 name="email"
-                className="bg-white w-full border p-3 rounded-lg outline-none"
+                className="bg-white w-full border p-2 rounded-md text-sm outline-none"
                 value={contactdata.email}
                 onChange={handlechange}
                 required
               />
-              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+              {errors.email && (
+                <p className="text-red-500 text-xs">{errors.email}</p>
+              )}
             </div>
 
             {/* Number */}
             <div>
-              <label className="block mb-1 font-medium">Your Number</label>
+              <label className="block mb-1 text-sm font-medium">
+                Your Number
+              </label>
               <input
                 type="tel"
                 name="number"
-                className="bg-white w-full border p-3 rounded-lg outline-none"
+                className="bg-white w-full border p-2 rounded-md text-sm outline-none"
                 value={contactdata.number}
                 onChange={handlechange}
                 required
               />
-              {errors.number && <p className="text-red-500 text-sm">{errors.number}</p>}
+              {errors.number && (
+                <p className="text-red-500 text-xs">{errors.number}</p>
+              )}
             </div>
 
             {/* Message */}
             <div>
-              <label className="block mb-1 font-medium">Your Message</label>
+              <label className="block mb-1 text-sm font-medium">
+                Your Message
+              </label>
               <textarea
                 name="message"
-                className="bg-white w-full border p-3 rounded-lg h-32 sm:h-40 outline-none"
+                className="bg-white w-full border p-2 rounded-md text-sm h-24 outline-none"
                 value={contactdata.message}
                 onChange={handlechange}
                 required
               />
-              {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+              {errors.message && (
+                <p className="text-red-500 text-xs">{errors.message}</p>
+              )}
             </div>
 
-            {/* Status Message */}
-            {status && <p className="text-center font-medium">{status}</p>}
+            {/* Status */}
+            {status && (
+              <p className="text-center text-sm font-medium">{status}</p>
+            )}
 
             {/* Button */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 rounded-lg font-semibold transition hover:opacity-90 cursor-pointer disabled:opacity-50"
+              className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-2 rounded-md text-sm font-semibold transition hover:opacity-90 disabled:opacity-50"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
@@ -172,3 +199,4 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+  
