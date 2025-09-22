@@ -73,7 +73,7 @@ const ContactUs = () => {
 
   return (
    
-      <div className="relative w-full flex flex-col items-center justify-center px-2 sm:px-4 py-4 sm:py-6">
+      <div className="relative w-full flex flex-col items-center justify-center px-2 sm:px-4 sm:py-6">
         <h1 className="text-center text-3xl sm:text-5xl font-bold mb-6 sm:mb-10 text-yellow-400">
           Contact Us
         </h1>
@@ -130,7 +130,7 @@ const ContactUs = () => {
               <label className="block mb-1 text-sm font-medium">Your Message</label>
               <textarea
                 name="message"
-                className="bg-white w-full border p-2 rounded-md text-sm h-24 outline-none"
+                className="bg-white w-full border p-2 rounded-md text-sm h-32 outline-none"
                 value={contactdata.message}
                 onChange={handlechange}
                 required
