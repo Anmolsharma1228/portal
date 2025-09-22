@@ -94,106 +94,87 @@ const ContactUs = () => {
       strength={300}
       className="min-h-screen"
     >
-      <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-black/50 py-5">
-        <h1 className="text-center text-4xl sm:text-5xl font-bold mb-10 text-yellow-400">
-          Contact Us
-        </h1>
+     <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-2 sm:px-6 lg:px-8 bg-black/50 py-4 sm:py-6">
+  <h1 className="text-center text-3xl sm:text-5xl font-bold mb-8 sm:mb-10 text-yellow-400">
+    Contact Us
+  </h1>
 
-        <div className="w-full max-w-md">
-          {" "}
-          {/* smaller width */}
-          <form
-            onSubmit={handledata}
-            className="backdrop-blur-md bg-white/30 text-gray-900 
-               p-4 sm:p-6 rounded-xl shadow-xl w-full space-y-3"
-          >
-            {/* Name */}
-            <div>
-              <label className="block mb-1 text-sm font-medium">
-                Your Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                className="bg-white w-full border p-2 rounded-md text-sm outline-none"
-                value={contactdata.name}
-                onChange={handlechange}
-                required
-              />
-              {errors.name && (
-                <p className="text-red-500 text-xs">{errors.name}</p>
-              )}
-            </div>
-
-            {/* Email */}
-            <div>
-              <label className="block mb-1 text-sm font-medium">
-                Your Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                className="bg-white w-full border p-2 rounded-md text-sm outline-none"
-                value={contactdata.email}
-                onChange={handlechange}
-                required
-              />
-              {errors.email && (
-                <p className="text-red-500 text-xs">{errors.email}</p>
-              )}
-            </div>
-
-            {/* Number */}
-            <div>
-              <label className="block mb-1 text-sm font-medium">
-                Your Number
-              </label>
-              <input
-                type="tel"
-                name="number"
-                className="bg-white w-full border p-2 rounded-md text-sm outline-none"
-                value={contactdata.number}
-                onChange={handlechange}
-                required
-              />
-              {errors.number && (
-                <p className="text-red-500 text-xs">{errors.number}</p>
-              )}
-            </div>
-
-            {/* Message */}
-            <div>
-              <label className="block mb-1 text-sm font-medium">
-                Your Message
-              </label>
-              <textarea
-                name="message"
-                className="bg-white w-full border p-2 rounded-md text-sm h-24 outline-none"
-                value={contactdata.message}
-                onChange={handlechange}
-                required
-              />
-              {errors.message && (
-                <p className="text-red-500 text-xs">{errors.message}</p>
-              )}
-            </div>
-
-            {/* Status */}
-            {status && (
-              <p className="text-center text-sm font-medium">{status}</p>
-            )}
-
-            {/* Button */}
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-2 rounded-md text-sm font-semibold transition hover:opacity-90 disabled:opacity-50"
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </form>
-        </div>
+  <div className="w-full max-w-md sm:max-w-lg">
+    <form
+      onSubmit={handledata}
+      className="backdrop-blur-md bg-white/30 text-gray-900 
+         p-3 sm:p-6 rounded-lg sm:rounded-xl shadow-xl w-full space-y-3"
+    >
+      {/* Name */}
+      <div>
+        <label className="block mb-1 text-sm font-medium">Your Name</label>
+        <input
+          type="text"
+          name="name"
+          className="bg-white w-full border p-2 rounded-md text-sm outline-none"
+          value={contactdata.name}
+          onChange={handlechange}
+          required
+        />
+        {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
       </div>
+
+      {/* Email */}
+      <div>
+        <label className="block mb-1 text-sm font-medium">Your Email</label>
+        <input
+          type="email"
+          name="email"
+          className="bg-white w-full border p-2 rounded-md text-sm outline-none"
+          value={contactdata.email}
+          onChange={handlechange}
+          required
+        />
+        {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
+      </div>
+
+      {/* Number */}
+      <div>
+        <label className="block mb-1 text-sm font-medium">Your Number</label>
+        <input
+          type="tel"
+          name="number"
+          className="bg-white w-full border p-2 rounded-md text-sm outline-none"
+          value={contactdata.number}
+          onChange={handlechange}
+          required
+        />
+        {errors.number && <p className="text-red-500 text-xs">{errors.number}</p>}
+      </div>
+
+      {/* Message */}
+      <div>
+        <label className="block mb-1 text-sm font-medium">Your Message</label>
+        <textarea
+          name="message"
+          className="bg-white w-full border p-2 rounded-md text-sm h-24 outline-none"
+          value={contactdata.message}
+          onChange={handlechange}
+          required
+        />
+        {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
+      </div>
+
+      {/* Status */}
+      {status && <p className="text-center text-sm font-medium">{status}</p>}
+
+      {/* Button */}
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full bg-gradient-to-r from-blue-700 to-blue-500 text-white py-2 rounded-md text-sm font-semibold transition hover:opacity-90 disabled:opacity-50"
+      >
+        {loading ? "Sending..." : "Send Message"}
+      </button>
+    </form>
+  </div>
+</div>
+
     </Parallax>
   );
 };
