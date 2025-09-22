@@ -95,16 +95,15 @@ const ContactUs = () => {
     //   className="min-h-screen"
     // >
     <div>
-      <div className="relative w-full min-h-screen flex flex-col items-center justify-center px-0 sm:px-6 lg:px-8 bg-white py-0 sm:py-6">
-  <h1 className="text-center text-2xl sm:text-5xl font-bold mb-6 sm:mb-10 text-yellow-400">
+      <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-white">
+  <h1 className="text-center text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-yellow-400">
     Contact Us
   </h1>
 
-  <div className="w-full max-w-md sm:max-w-lg">
+  <div className="w-full sm:max-w-lg px-2 sm:px-0">
     <form
       onSubmit={handledata}
-      className="backdrop-blur-md bg-white/30 text-gray-900 
-         p-2 sm:p-6 rounded-md sm:rounded-xl shadow-xl w-full space-y-3"
+      className="backdrop-blur-md bg-white/50 text-gray-900 p-2 sm:p-6 rounded-md sm:rounded-xl shadow-xl w-full space-y-3"
     >
       {/* Name */}
       <div>
