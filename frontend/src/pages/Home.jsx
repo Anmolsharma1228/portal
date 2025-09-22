@@ -67,7 +67,7 @@ const Home = () => {
           <WhyUs />
         </section>
         {/* Contact Us  */}
-        <section className="bg-gray-900 py-5">
+        <section className="bg-gray-900 py-12">
           <ContactUs />
         </section>
       </main>
