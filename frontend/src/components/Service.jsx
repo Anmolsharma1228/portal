@@ -139,8 +139,8 @@ const Service = () => {
   const [open, setOpen] = useState(null);
 
   return (
-    <section className="bg-gradient-to-r from-black via-[#0f172a] to-black text-white py-16">
-      <h1 className="text-center font-bold text-4xl md:text-5xl py-6 text-yellow-500 tracking-wide">
+    <section className="bg-gradient-to-r from-black via-[#0f172a] to-black text-white py-12">
+      <h1 className="text-center font-bold text-4xl md:text-5xl mb-8 text-yellow-500 tracking-wide">
         Services
       </h1>
 

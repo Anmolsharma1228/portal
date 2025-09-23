@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import stock from '../assets/Images/stock2.avif';
 import WhyUs from '../components/WhyUs';
 import Service from '../components/Service';
 import { Marquees } from '../components/Marquees';
 import ContactUs from '../components/ContactUs';
+import ResearchPara from '../components/ResearchPara';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -61,6 +63,30 @@ const Home = () => {
 
         {/* Service Section */}
         <Service />
+
+        {/* Research Parameters Section */}
+        <section className="bg-gray-800 py-10">
+           <div className="py-5 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-20">
+      {/* Title */}
+      <h1 className="text-center text-3xl sm:text-4xl font-bold text-yellow-500 mb-6">
+        Research Parameters
+      </h1>
+
+      {/* Paragraph */}
+      <p className="max-w-3xl text-base sm:text-lg text-gray-100 leading-relaxed text-justify">
+        At <span className="font-semibold text-yellow-400">Behind The Profit</span>, 
+        we understand that successful investing is not built on assumptions, but on 
+        structured research, disciplined analysis, and informed decision-making. Every 
+        recommendation we provide is the outcome of a multi-layered research process, 
+        designed to minimize risks and maximize opportunities for our clients.
+        <br /><br />
+        Our philosophy is simple: accurate research leads to confident investing. By 
+        combining fundamental insights, technical expertise, risk control, and market 
+        intelligence, we ensure that each strategy is not only data-driven but also 
+        practical for real market conditions. <Link to='/ResearchPara' className='text-red-500 underline'>Learn More</Link>
+      </p>
+    </div>
+        </section>
 
         {/* Why Us Section */}
         <section className="bg-neutral-950 py-10">

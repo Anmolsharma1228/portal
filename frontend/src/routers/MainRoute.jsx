@@ -4,12 +4,14 @@ import { Navbar } from '../components/Navbar'
 import Footer from '../components/Footer'
 import WhatsAppButton from '../components/WhatsAppButton'
 import Loader from '../components/Loader'
+import Service from '../components/Service'
 
 const Home = React.lazy(() => import('../pages/Home'));
 const News = React.lazy(() => import('../pages/News'));
 const Learn = React.lazy(() => import('../pages/Learn'));
 const About = React.lazy(() => import('../pages/About'));
 const Policy = React.lazy(() => import('../pages/Policy'))
+const ResearchPara = React.lazy(() => import('../components/ResearchPara'))
 
 const MainRoute = () => {
   return (
@@ -23,6 +25,8 @@ const MainRoute = () => {
       <Route path='/Learn' element={<Learn/>}></Route>
       <Route path='/About' element={<About/>}></Route>
       <Route path='/Policy' element={<Policy/>}></Route>
+      <Route path='/ResearchPara' element={<ResearchPara/>}></Route>
+      {/* <Route path='/Service' element={<Service/>}></Route> */}
      </Routes>
     </Suspense>
     <WhatsAppButton />
