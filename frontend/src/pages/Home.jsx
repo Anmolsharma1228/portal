@@ -62,8 +62,9 @@ const Home = () => {
         </section>
 
         {/* Service Section */}
-        <Service />
-
+        <section id='Services'>
+          <Service />
+        </section>
         {/* Research Parameters Section */}
         <section className="bg-gray-800 py-10">
            <div className="py-5 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-20">

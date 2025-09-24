@@ -11,7 +11,6 @@ const About = () => {
       <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1611078489856-1c9a9e6466ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80')] bg-cover bg-center" />
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 py-20 space-y-20 ">
-        
         {/* INTRO */}
         <div className="text-center max-w-3xl mx-auto">
           <motion.h1
@@ -115,8 +114,11 @@ const About = () => {
               At Behind The Profit, we don’t just guide investments — we nurture{" "}
               <span className="text-yellow-400 font-semibold">trust</span>,{" "}
               <span className="text-yellow-400 font-semibold">confidence</span>,
-              and <span className="text-yellow-400 font-semibold">lasting wealth</span>.
-              Whether you’re new to trading or scaling your portfolio, we help
+              and{" "}
+              <span className="text-yellow-400 font-semibold">
+                lasting wealth
+              </span>
+              . Whether you’re new to trading or scaling your portfolio, we help
               you stay ahead of market trends and maximize every gain.
             </p>
           </motion.div>
@@ -155,7 +157,10 @@ const About = () => {
           transition={{ duration: 0.9 }}
           className="text-center"
         >
-          <Link to="/" className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-red-500 text-black font-semibold rounded-xl shadow-lg hover:scale-105 transition">
+          <Link
+            to="/#Services"
+            className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-red-500 text-black font-semibold rounded-xl shadow-lg hover:scale-105 transition"
+          >
             Explore Our Services
           </Link>
         </motion.div>
