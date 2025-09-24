@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import WhatsAppButton from '../components/WhatsAppButton'
 import Loader from '../components/Loader'
 import Service from '../components/Service'
+import Disclaimer from '../pages/Disclaimer'
 
 const Home = React.lazy(() => import('../pages/Home'));
 const News = React.lazy(() => import('../pages/News'));
@@ -26,6 +27,7 @@ const MainRoute = () => {
       <Route path='/About' element={<About/>}></Route>
       <Route path='/Policy' element={<Policy/>}></Route>
       <Route path='/ResearchPara' element={<ResearchPara/>}></Route>
+      <Route path='/Disclaimer' element={<Disclaimer/>}></Route>
       {/* <Route path='/Service' element={<Service/>}></Route> */}
      </Routes>
     </Suspense>
