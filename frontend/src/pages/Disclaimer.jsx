@@ -3,7 +3,7 @@ import React from "react";
 const Disclaimer = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-black via-[#0f172a] to-black py-16 px-6 sm:px-12 lg:px-24 text-gray-100 mt-20">
-      <div className="max-w-4xl mx-auto bg-gray-900/90 shadow-2xl rounded-2xl p-10 border border-gray-700">
+      <div className="max-w-4xl mx-auto bg-gray-900/90 shadow-2xl rounded-2xl p-5 sm:p-10 border border-gray-700">
         {/* Title */}
         <h1 className="text-4xl font-extrabold mb-10 text-yellow-400 text-center tracking-wide">
           Disclaimer
