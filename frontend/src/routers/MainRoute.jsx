@@ -7,6 +7,9 @@ import Loader from "../components/Loader";
 import ScrollToHashElement from "../components/ScrollToHashElement";
 import Service from "../components/Service";
 import Disclaimer from "../pages/Disclaimer";
+import AlphaOverv from "../components/AlphaOverv";
+import TurboOverv from "../components/TurboOverv";
+import ComboOverv from "../components/ComboOverv";
 
 // Lazy loaded pages
 const Home = React.lazy(() => import("../pages/Home"));
@@ -15,6 +18,7 @@ const Learn = React.lazy(() => import("../pages/Learn"));
 const About = React.lazy(() => import("../pages/About"));
 const Policy = React.lazy(() => import("../pages/Policy"));
 const ResearchPara = React.lazy(() => import("../components/ResearchPara"));
+
 
 const MainRoute = () => {
   return (
@@ -33,6 +37,9 @@ const MainRoute = () => {
           <Route path="/Policy" element={<Policy />} />
           <Route path="/ResearchPara" element={<ResearchPara />} />
           <Route path="/Disclaimer" element={<Disclaimer />} />
+          <Route path="/Alpha" element={<AlphaOverv />} />
+          <Route path="/Turbo" element={<TurboOverv />} />
+          <Route path="/Combo" element={<ComboOverv />} />
         </Routes>
       </Suspense>
 
