@@ -1,7 +1,5 @@
-// components/WhyUs.jsx
 import React from "react";
 import { TrendingUp, ShieldCheck, BarChart3 } from "lucide-react";
-import why from '../assets/Images/why.jpg';
 
 const WhyUs = () => {
   const features = [

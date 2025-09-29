@@ -10,28 +10,56 @@ import over7 from "../assets/Images/over7.avif";
 const features = [
   {
     title: "Time-Bound Investment Horizon",
-    desc: "Designed for a 6–12 month period, providing a clear roadmap and expected outcomes.",
+    desc: "Designed specifically for a 6–12 month period, ensuring investors have a clear roadmap and expected outcomes. Perfect for individuals who do not want to stay locked in for years but still seek meaningful returns.",
     img: over1,
   },
   {
     title: "Focused Stock Selection",
-    desc: "Identifies stocks and sectors backed by strong near-term drivers, fundamentals, and technical setups.",
+    desc: "Our research team identifies stocks, sectors, and opportunities backed by strong near-term drivers. Emphasis is placed on companies with solid fundamentals, positive earnings visibility, and strong technical setups.",
     img: over2,
   },
   {
     title: "Balanced Risk & Reward",
-    desc: "Implements defined entry/exit points, stop-losses, and regular portfolio reviews to protect capital.",
+    desc: "While chasing alpha, risk management remains central. We set defined entry and exit levels, stop-losses, and regular portfolio reviews to protect investor capital.",
     img: over3,
   },
   {
     title: "Data-Driven Approach",
-    desc: "Combines fundamental and technical analysis, market sentiment, liquidity flows, and global cues.",
+    desc: "The strategy combines fundamental analysis (to ensure long-term strength) with technical analysis (to time the market). Market sentiment, liquidity flows, and global cues are also considered.",
     img: over4,
   },
   {
     title: "Active Monitoring",
-    desc: "Short-term nature demands constant tracking and timely adjustments.",
+    desc: "The short-term nature requires constant monitoring and timely adjustments. We actively rebalance positions to take advantage of sudden price movements.",
     img: over5,
+  },
+];
+
+const howItWorks = [
+  {
+    title: "Research & Screening",
+    desc: "Our analysts scan the market to shortlist companies showing positive short-term triggers such as sectoral growth, strong earnings reports, or upcoming policy advantages.",
+    img: over6,
+  },
+  {
+    title: "Technical Alignment",
+    desc: "Using advanced technical indicators and charting tools, we identify the best entry points to maximize returns while limiting downside risks.",
+    img: over7,
+  },
+  {
+    title: "Portfolio Structuring",
+    desc: "Investors’ funds are allocated into a diversified set of short-term picks, ensuring a balance between high-growth potential and capital safety.",
+    img: "https://source.unsplash.com/400x250/?portfolio,finance",
+  },
+  {
+    title: "Continuous Tracking",
+    desc: "The portfolio is regularly tracked, and necessary adjustments are made in case of market volatility or changes in stock performance.",
+    img: "https://source.unsplash.com/400x250/?monitoring,stocks",
+  },
+  {
+    title: "Exit Planning",
+    desc: "Unlike buy-and-hold strategies, Alpha Move has pre-defined exit targets, ensuring profits are booked on time.",
+    img: "https://source.unsplash.com/400x250/?profit,finance",
   },
 ];
 
@@ -50,8 +78,9 @@ const AlphaOverv = () => {
             Alpha Move Strategy
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-2xl mb-6">
-            A short-term investment approach for high returns within 6–12 months,
-            leveraging market momentum, trend shifts, and growth catalysts.
+            A short-term investment approach for high returns within 6–12
+            months, leveraging market momentum, trend shifts, and growth
+            catalysts.
           </p>
           <a
             href="#features"
@@ -62,9 +91,35 @@ const AlphaOverv = () => {
         </div>
       </div>
 
+      {/* Overview */}
+      <div className="max-w-4xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
+        <h2 className="text-3xl font-semibold mb-6 text-center">Overview</h2>
+        <p className="text-gray-300 text-lg leading-relaxed">
+          The Alpha Move Strategy is a carefully crafted short-term investment
+          approach designed for individuals who aim to maximize returns within a
+          defined period of 6 to 12 months. Unlike traditional long-term
+          strategies that rely on holding investments for years, Alpha Move
+          focuses on short-duration opportunities in the market where momentum,
+          trend shifts, and growth catalysts align to deliver potential
+          outperformance, or what we call alpha.
+        </p>
+        <p className="text-gray-300 text-lg leading-relaxed mt-4">
+          In today’s fast-paced financial markets, short-term opportunities
+          often arise due to changing economic conditions, quarterly earnings,
+          sectoral trends, or government policy shifts. The Alpha Move Strategy
+          leverages these catalysts to create a disciplined, research-backed
+          investment plan that minimizes risks while targeting superior gains.
+        </p>
+      </div>
+
       {/* Key Features */}
-      <div id="features" className="max-w-6xl mx-auto py-20 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">Key Features</h2>
+      <div
+        id="features"
+        className="max-w-6xl mx-auto py-20 px-6 sm:px-12 lg:px-20"
+      >
+        <h2 className="text-3xl font-semibold mb-10 text-center">
+          Key Features
+        </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <div
@@ -86,60 +141,84 @@ const AlphaOverv = () => {
         </div>
       </div>
 
-      {/* How It Works */}
-      <div className="max-w-6xl mx-auto mb-16 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">How It Works</h2>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              title: "Research & Screening",
-              desc: "Analysts shortlist companies showing positive short-term triggers such as sectoral growth, earnings reports, or policy advantages.",
-              img: over6,
-            },
-            {
-              title: "Technical Alignment",
-              desc: "Advanced technical indicators identify optimal entry points to maximize returns while limiting downside.",
-              img: over7,
-            },
-            {
-              title: "Portfolio Structuring",
-              desc: "Funds are allocated into diversified short-term picks to balance growth potential and capital safety.",
-              img: "https://source.unsplash.com/400x250/?portfolio,finance",
-            },
-            {
-              title: "Continuous Tracking",
-              desc: "The portfolio is actively monitored, with adjustments made during market volatility or stock performance changes.",
-              img: "https://source.unsplash.com/400x250/?monitoring,stocks",
-            },
-            {
-              title: "Exit Planning",
-              desc: "Pre-defined exit targets ensure profits are booked on time, unlike traditional buy-and-hold strategies.",
-              img: "https://source.unsplash.com/400x250/?profit,finance",
-            },
-          ].map((step, idx) => (
-            <div
-              key={idx}
-              className="bg-gray-800 rounded-lg p-6 shadow-lg hover:scale-105 transition-transform duration-300"
-            >
-              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-              <p className="text-gray-300">{step.desc}</p>
-              {/* <img
-                src={step.img}
-                alt={`Illustration for ${step.title}`}
-                className="mt-4 w-full h-40 object-cover rounded"
-                loading="lazy"
-              /> */}
-            </div>
-          ))}
+      {/* Why Choose This Strategy with images */}
+      <div className="max-w-6xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
+        <h2 className="text-3xl font-semibold mb-10 text-center">
+          Why Choose This Strategy?
+        </h2>
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <img
+            src={over6}
+            alt="Why Choose"
+            className="w-full md:w-1/2 h-6/12 object-cover rounded-lg shadow-lg"
+          />
+          <ul className="list-disc list-inside space-y-4 text-gray-300 text-lg md:w-1/2">
+            <li>
+              <strong>Short-Term Commitment:</strong> Achieve returns within
+              6–12 months.
+            </li>
+            <li>
+              <strong>Flexibility:</strong> Suitable for agile investors.
+            </li>
+            <li>
+              <strong>Superior Returns (Alpha):</strong> Focus on outperforming
+              standard market benchmarks.
+            </li>
+            <li>
+              <strong>Risk-Managed Growth:</strong> Capital preservation remains
+              central.
+            </li>
+            <li>
+              <strong>Professional Guidance:</strong> Recommendations are
+              research-backed and expert-driven.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Who Should Opt with images */}
+      <div className="max-w-6xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
+        <h2 className="text-3xl font-semibold mb-10 text-center">
+          Who Should Opt for This Strategy?
+        </h2>
+        <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+          <img
+            src={over7}
+            alt="Who Should Opt"
+            className="w-full md:w-1/2 h-6/12 object-cover rounded-lg shadow-lg"
+          />
+          <ul className="list-disc list-inside space-y-4 text-gray-300 text-lg md:w-1/2">
+            <li>
+              Investors looking for short-term opportunities without committing
+              to a multi-year horizon.
+            </li>
+            <li>
+              Individuals who want active portfolio management with regular
+              monitoring and adjustments.
+            </li>
+            <li>
+              Traders or investors aiming for returns higher than traditional
+              market averages in a limited time frame.
+            </li>
+            <li>
+              Those who prefer a structured, research-backed, and disciplined
+              approach rather than speculative trading.
+            </li>
+          </ul>
         </div>
       </div>
 
       {/* Conclusion */}
       <div className="max-w-4xl mx-auto text-gray-300 text-center py-20 px-6 sm:px-12 lg:px-20">
         <h2 className="text-3xl font-semibold mb-4">Conclusion</h2>
-        <p className="text-lg">
-          The Alpha Move Strategy bridges long-term wealth creation and high-frequency trading, offering a short-term investment model to grow wealth within 6–12 months.
-          Through disciplined research, risk management, and precise market timing, it empowers investors to seize opportunities when they matter most.
+        <p className="text-lg leading-relaxed">
+          The Alpha Move Strategy bridges the gap between long-term wealth
+          creation and high-frequency trading. It is an ideal short-term
+          investment model for those who want to grow their wealth within a 6 to
+          12 month horizon, while still ensuring risk management, discipline,
+          and research-driven stock selection. By combining market intelligence,
+          fundamental strength, and technical precision, the Alpha Move Strategy
+          empowers investors to capture opportunities when they matter most.
         </p>
       </div>
     </section>
