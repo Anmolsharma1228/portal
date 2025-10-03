@@ -1,11 +1,11 @@
 import React from "react";
-import over1 from "../assets/Images/over1.jpg";
-import over2 from "../assets/Images/over2.avif";
-import over3 from "../assets/Images/over3.jpg";
-import over4 from "../assets/Images/over4.jpg";
-import over5 from "../assets/Images/over5.avif";
-import over6 from "../assets/Images/over6.jpg";
-import over7 from "../assets/Images/over7.avif";
+import over15 from "../assets/Images/over15.avif";
+import over16 from "../assets/Images/over16.webp";
+import over17 from "../assets/Images/over17.webp";
+import over18 from "../assets/Images/over18.avif";
+import over19 from "../assets/Images/over19.avif";
+import over20 from "../assets/Images/over20.avif";
+import over21 from "../assets/Images/over21.avif";
 
 const ComboOverv = () => {
   return (
@@ -62,21 +62,21 @@ const ComboOverv = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-            <img src={over1} alt="Dual Focus" className="rounded mb-4 h-40 w-full object-cover" />
+            <img src={over15} alt="Dual Focus" className="rounded mb-4 h-40 w-full object-cover" />
             <h3 className="text-xl font-bold mb-2">Dual Focus</h3>
             <p className="text-gray-300">
               Capture short-term profits while laying the foundation for long-term wealth.
             </p>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-            <img src={over2} alt="Diversified Approach" className="rounded mb-4 h-40 w-full object-cover" />
+            <img src={over16} alt="Diversified Approach" className="rounded mb-4 h-40 w-full object-cover" />
             <h3 className="text-xl font-bold mb-2">Diversified Approach</h3>
             <p className="text-gray-300">
               A mix of momentum-based trades and fundamentally strong investments.
             </p>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-            <img src={over3} alt="Risk Adjusted" className="rounded mb-4 h-40 w-full object-cover" />
+            <img src={over17} alt="Risk Adjusted" className="rounded mb-4 h-40 w-full object-cover" />
             <h3 className="text-xl font-bold mb-2">Risk-Adjusted Returns</h3>
             <p className="text-gray-300">
               Balancing aggressive short-term moves with stable long-term growth.
@@ -98,22 +98,22 @@ const ComboOverv = () => {
             {
               title: "Two-in-One Strategy",
               desc: "Capital split between Alpha (short-term) and Turbo (long-term), ensuring continuous growth.",
-              img: over4,
+              img: over18,
             },
             {
               title: "Regular Returns + Portfolio Growth",
               desc: "Alpha provides 6–12 month returns, Turbo builds compounding long-term wealth.",
-              img: over5,
+              img: over19,
             },
             {
               title: "Dynamic Risk Management",
               desc: "Short-term trades use strict stop-losses, while long-term holdings are rebalanced periodically.",
-              img: over6,
+              img: over20,
             },
             {
               title: "Diversification Across Horizons",
               desc: "Short-term plays capture immediate opportunities, long-term holdings ensure stability.",
-              img: over7,
+              img: over21,
             },
           ].map((f, idx) => (
             <div

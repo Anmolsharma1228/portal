@@ -62,7 +62,7 @@ export const Navbar = () => {
         {/* Call Info */}
         <div className="text-white space-x-4 lg:text-[20px] text-[17px] hidden sm:block font-bold">
           <p className="flex items-center text-[#FFD700]">
-            <Phone className="mr-1" /> - 115656984847
+            <Phone className="mr-1" />  +918126816165
           </p>
         </div>
       </nav>

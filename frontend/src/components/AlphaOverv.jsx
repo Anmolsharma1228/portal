@@ -39,27 +39,22 @@ const howItWorks = [
   {
     title: "Research & Screening",
     desc: "Our analysts scan the market to shortlist companies showing positive short-term triggers such as sectoral growth, strong earnings reports, or upcoming policy advantages.",
-    img: over6,
   },
   {
     title: "Technical Alignment",
     desc: "Using advanced technical indicators and charting tools, we identify the best entry points to maximize returns while limiting downside risks.",
-    img: over7,
   },
   {
     title: "Portfolio Structuring",
     desc: "Investors’ funds are allocated into a diversified set of short-term picks, ensuring a balance between high-growth potential and capital safety.",
-    img: "https://source.unsplash.com/400x250/?portfolio,finance",
   },
   {
     title: "Continuous Tracking",
     desc: "The portfolio is regularly tracked, and necessary adjustments are made in case of market volatility or changes in stock performance.",
-    img: "https://source.unsplash.com/400x250/?monitoring,stocks",
   },
   {
     title: "Exit Planning",
     desc: "Unlike buy-and-hold strategies, Alpha Move has pre-defined exit targets, ensuring profits are booked on time.",
-    img: "https://source.unsplash.com/400x250/?profit,finance",
   },
 ];
 
@@ -78,7 +73,7 @@ const AlphaOverv = () => {
             Alpha Move Strategy
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-2xl mb-6">
-            A short-term investment approach for high returns within 6–12
+            A short-term investment approach for high returns within 6
             months, leveraging market momentum, trend shifts, and growth
             catalysts.
           </p>
@@ -136,6 +131,25 @@ const AlphaOverv = () => {
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.desc}</p>
               </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+       {/* How It Works */}
+      <div className="max-w-6xl mx-auto mb-16 px-6 sm:px-12 lg:px-20">
+        <h2 className="text-3xl font-semibold mb-10 text-center">
+          How the Strategy Works
+        </h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {howItWorks.map((step, idx) => (
+            <div
+              key={idx}
+              className="bg-gray-800 rounded-lg p-6 shadow-lg hover:scale-105 transition-transform duration-300"
+            >
+              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+              <p className="text-gray-300">{step.desc}</p>
+             
             </div>
           ))}
         </div>

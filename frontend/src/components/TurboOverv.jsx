@@ -1,37 +1,37 @@
 import React from "react";
-import over1 from "../assets/Images/over1.jpg";
-import over2 from "../assets/Images/over2.avif";
-import over3 from "../assets/Images/over3.jpg";
-import over4 from "../assets/Images/over4.jpg";
-import over5 from "../assets/Images/over5.avif";
-import over6 from "../assets/Images/over6.jpg";
-import over7 from "../assets/Images/over7.avif";
+import over8 from "../assets/Images/over8.avif";
+import over9 from "../assets/Images/over9.avif";
+import over10 from "../assets/Images/over10.avif";
+import over11 from "../assets/Images/over11.avif";
+import over12 from "../assets/Images/over12.avif";
+import over13 from "../assets/Images/over13.avif";
+import over14 from "../assets/Images/over14.avif";
 
 const features = [
   {
     title: "Long-Term Horizon",
     desc: "Designed for investments that stretch beyond one year, with the flexibility to hold for multiple years. Suitable for building a core portfolio that stands strong against short-term volatility.",
-    img: over1,
+    img: over8,
   },
   {
     title: "Compounding Effect",
     desc: "By holding quality businesses longer, investors benefit from the power of compounding returns. Reinvesting profits further accelerates wealth growth.",
-    img: over2,
+    img: over9,
   },
   {
     title: "Strong Fundamentals",
     desc: "Focus on companies with robust balance sheets, consistent earnings, and future growth potential. Emphasis on sectors with long-term relevance and scalability.",
-    img: over3,
+    img: over10,
   },
   {
     title: "Risk Mitigation",
     desc: "A diversified portfolio ensures risks are spread across industries, market caps, and geographies. Periodic rebalancing maintains the right mix between growth and stability.",
-    img: over4,
+    img: over11,
   },
   {
     title: "Discipline Over Speculation",
     desc: "Avoids chasing short-term market noise. Emphasizes steadfast holding periods with data-backed entry and exit points.",
-    img: over5,
+    img: over12,
   },
 ];
 
@@ -39,27 +39,22 @@ const howItWorks = [
   {
     title: "Stock & Sector Identification",
     desc: "Our experts screen companies with long-term growth drivers, focusing on industries expected to thrive in the coming years (technology, healthcare, energy, infrastructure, etc.).",
-    img: over6,
   },
   {
     title: "Fundamental Research",
     desc: "A detailed analysis of financial strength, management quality, debt levels, and industry positioning ensures only the most reliable companies are included.",
-    img: over7,
   },
   {
     title: "Portfolio Construction",
     desc: "Investments are allocated across a carefully balanced portfolio — including large-cap stability, mid-cap growth, and selective small-cap opportunities.",
-    img: "https://source.unsplash.com/400x250/?portfolio,finance",
   },
   {
     title: "Active Oversight",
     desc: "While this is a long-term strategy, the portfolio is regularly reviewed to account for shifts in market dynamics, economic policies, and company fundamentals.",
-    img: "https://source.unsplash.com/400x250/?monitoring,stocks",
   },
   {
     title: "Compounding & Rebalancing",
     desc: "Profits are reinvested strategically, and the portfolio is rebalanced at intervals to maintain optimum growth potential with minimal risk.",
-    img: "https://source.unsplash.com/400x250/?profit,finance",
   },
 ];
 
@@ -153,12 +148,7 @@ const TurboOverv = () => {
             >
               <h3 className="text-xl font-bold mb-2">{step.title}</h3>
               <p className="text-gray-300">{step.desc}</p>
-              {/* <img
-                src={step.img}
-                alt={`Illustration for ${step.title}`}
-                className="mt-4 w-full h-40 object-cover rounded"
-                loading="lazy"
-              /> */}
+             
             </div>
           ))}
         </div>
@@ -171,7 +161,7 @@ const TurboOverv = () => {
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <img
-            src={over6}
+            src={over13}
             alt="Benefits"
             className="w-full md:w-1/2 h-6/12 object-cover rounded-lg shadow-lg"
           />
@@ -207,7 +197,7 @@ const TurboOverv = () => {
         </h2>
         <div className="flex flex-col md:flex-row-reverse items-center gap-8">
           <img
-            src={over7}
+            src={over14}
             alt="Who Should Choose"
             className="w-full md:w-1/2 h-6/12 object-cover rounded-lg shadow-lg"
           />
