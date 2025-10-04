@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "919667384928";
+  const phoneNumber = "918126816165";
 
   return (
     <Link
