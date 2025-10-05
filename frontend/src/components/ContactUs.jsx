@@ -81,7 +81,7 @@ const ContactUs = () => {
         <div className="w-full max-w-sm sm:max-w-lg">
           <form
             onSubmit={handledata}
-            className="backdrop-blur-md bg-white/80 text-gray-900 p-2 sm:p-6 rounded-md shadow-xl w-full space-y-3"
+            className="backdrop-blur-md bg-white/80 text-gray-900 p-4 sm:p-6 rounded-md shadow-xl w-full space-y-3"
           >
             {/* Name */}
             <div>
