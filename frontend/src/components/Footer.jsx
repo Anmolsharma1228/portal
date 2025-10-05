@@ -123,7 +123,7 @@ export default function Footer() {
             <Link to="" className="hover:text-sky-400">
               <FaTwitter />
             </Link>
-            <Link to="https://www.linkedin.com/in/behindthe-profit-0a4706388?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="hover:text-blue-400">
+            <Link to="https://www.linkedin.com/company/109053417/admin?lipi=urn%3Ali%3Apage%3Aorganization_admin_admin_dashboard_index%3Bfd641925-b643-4e37-98ec-7e1773ca1449" className="hover:text-blue-400">
               <FaLinkedinIn />
             </Link>
             <Link to="" className="hover:text-pink-500">
