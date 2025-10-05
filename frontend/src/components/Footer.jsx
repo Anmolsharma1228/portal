@@ -89,7 +89,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <p className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-yellow-400" />
-                behindtheprofit991@gmail.com
+                behindtheprofit510@gmail.com
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-green-400" />
@@ -123,7 +123,7 @@ export default function Footer() {
             <Link to="" className="hover:text-sky-400">
               <FaTwitter />
             </Link>
-            <Link to="" className="hover:text-blue-400">
+            <Link to="https://www.linkedin.com/in/behindthe-profit-0a4706388?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="hover:text-blue-400">
               <FaLinkedinIn />
             </Link>
             <Link to="" className="hover:text-pink-500">
