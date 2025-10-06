@@ -124,8 +124,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-4 mt-4 sm:mt-0 text-lg">
             <Link
-              to="Open this link guy's fast
-https://www.facebook.com/profile.php?id=61581549496184"
+              to="https://www.facebook.com/profile.php?id=61581549496184"
               className="hover:text-blue-500"
             >
               <FaFacebookF />
