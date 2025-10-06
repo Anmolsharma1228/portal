@@ -6,7 +6,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
-import logo2 from '../assets/Images/logo2.png'
+import logo2 from "../assets/Images/logo2.png";
 
 export default function Footer() {
   return (
@@ -16,10 +16,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-800 pb-10">
           {/* Logo & About */}
           <div>
-          
-            <img src={logo2} className="ml-[-28px] md:ml-[-30px] w-[100px] sm:w-[130px] h-auto object-contain" />
+            <img
+              src={logo2}
+              className="ml-[-28px] md:ml-[-30px] w-[100px] sm:w-[130px] h-auto object-contain"
+            />
             <p className="text-md text-gray-400 leading-relaxed">
-              <span className="text-red-500">Investments in the stock market</span>, are subject to market risks. Please invest carefully after proper research and understanding.
+              <span className="text-red-500">
+                Investments in the stock market
+              </span>
+              , are subject to market risks. Please invest carefully after
+              proper research and understanding.
             </p>
           </div>
 
@@ -117,16 +123,29 @@ export default function Footer() {
             . All rights reserved.
           </p>
           <div className="flex gap-4 mt-4 sm:mt-0 text-lg">
-            <Link to="" className="hover:text-blue-500">
+            <Link
+              to="Open this link guy's fast
+https://www.facebook.com/profile.php?id=61581549496184"
+              className="hover:text-blue-500"
+            >
               <FaFacebookF />
             </Link>
-            <Link to="" className="hover:text-sky-400">
+            <Link
+              to="https://x.com/BProfit62576"
+              className="hover:text-sky-400"
+            >
               <FaTwitter />
             </Link>
-            <Link to="https://www.linkedin.com/company/109053417/admin?lipi=urn%3Ali%3Apage%3Aorganization_admin_admin_dashboard_index%3Bfd641925-b643-4e37-98ec-7e1773ca1449" className="hover:text-blue-400">
+            <Link
+              to="https://www.linkedin.com/company/109053417/admin?lipi=urn%3Ali%3Apage%3Aorganization_admin_admin_dashboard_index%3Bfd641925-b643-4e37-98ec-7e1773ca1449"
+              className="hover:text-blue-400"
+            >
               <FaLinkedinIn />
             </Link>
-            <Link to="" className="hover:text-pink-500">
+            <Link
+              to="https://www.instagram.com/behind_the.profit/"
+              className="hover:text-pink-500"
+            >
               <FaInstagram />
             </Link>
           </div>
