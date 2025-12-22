@@ -28,10 +28,10 @@ const Home = () => {
               viewport={{ once: true }}
               className="mt-10 mx-2"
             >
-              <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400">
+              <h2 className="text-xl sm:text-2xl font-bold text-yellow-400">
                 Decode the Market with Behind The Profit
               </h2>
-              <p className="mt-4 text-gray-400 text-lg sm:text-xl leading-relaxed">
+              <p className="mt-4 text-gray-400 text-[16px] leading-relaxed">
                 Welcome to{" "}
                 <span className="text-white font-semibold">
                   Behind The Profit
@@ -75,7 +75,7 @@ const Home = () => {
         <section className="bg-gray-800 py-10">
           <div className="py-5 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-20">
             {/* Title */}
-            <h1 className="text-center text-3xl sm:text-4xl font-bold text-yellow-500 mb-6">
+            <h1 className="text-center text-lg sm:text-[35px] font-bold text-yellow-500 mb-6">
               Research Parameters
             </h1>
 

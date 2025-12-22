@@ -80,8 +80,8 @@ const ServiceCard = ({ service, isOpen, setOpen }) => {
             className={`w-12 h-12 ${text} group-hover:scale-125 transition duration-300`}
           />
         </div>
-        <h3 className={`text-2xl font-semibold ${text}`}>{title}</h3>
-        <p className="mt-3 text-gray-400 text-lg">{desc}</p>
+        <h3 className={`text-xl font-semibold ${text}`}>{title}</h3>
+        <p className="mt-3 text-gray-400 text-[16px]">{desc}</p>
         <div
           className={`absolute inset-0 opacity-0 group-hover:opacity-20 bg-gradient-to-tr ${glow} to-transparent blur-2xl transition`}
         ></div>
@@ -119,7 +119,7 @@ const ServiceCard = ({ service, isOpen, setOpen }) => {
 
               <ul className="list-disc text-gray-200 space-y-2 text-left">
                 {details.map((point, index) => (
-                  <li key={index}>{point}</li>
+                  <li key={index} className="text-[14px]">{point}</li>
                 ))}
               </ul>
 
@@ -157,7 +157,7 @@ const Service = () => {
 
   return (
     <section className="bg-gradient-to-r from-black via-[#0f172a] to-black text-white py-12">
-      <h1 className="text-center font-bold text-4xl md:text-5xl mb-8 text-yellow-500 tracking-wide">
+      <h1 className="text-center font-bold text-xl md:text-[35px] mb-8 text-yellow-500 tracking-wide">
         Services
       </h1>
 

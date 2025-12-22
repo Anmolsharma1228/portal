@@ -20,7 +20,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="bg-gradient-to-r from-black via-[#0f172a] to-black w-full fixed top-0 right-0 left-0 mx-auto z-10 h-[100px] md:h-[120px] shadow-md">
+    <header className="bg-black/60 backdrop-blur-lg w-full fixed top-0 right-0 left-0 mx-auto z-10 h-[100px] md:h-[110px] shadow-md">
       <MarqueeHeadline />
 
       <nav className="flex justify-between items-center mx-4 mt-[-20px]">
@@ -43,7 +43,7 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="md:space-x-6 lg:text-[20px] font-bold hidden md:block">
+        <div className="md:space-x-6 lg:text-[16px] font-semibold hidden md:block">
           {menuItems.map((item, index) => (
             <NavLink
               key={index}
@@ -60,7 +60,7 @@ export const Navbar = () => {
         </div>
 
         {/* Call Info */}
-        <div className="text-white space-x-4 lg:text-[20px] text-[17px] hidden sm:block font-bold">
+        <div className="text-white space-x-4 lg:text-[16px] text-[17px] hidden sm:block font-semibold">
           <p className="flex items-center text-[#FFD700]">
             <Phone className="mr-1" />  +918126816165
           </p>

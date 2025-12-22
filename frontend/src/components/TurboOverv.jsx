@@ -69,10 +69,10 @@ const TurboOverv = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-6 sm:px-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4">
             Turbo Trade Strategy
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-2xl mb-6">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-6">
             A long-term investment approach for building sustainable wealth over
             1 year and beyond.
           </p>
@@ -88,7 +88,7 @@ const TurboOverv = () => {
       {/* Overview */}
       <div className="max-w-4xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
         <h2 className="text-3xl font-semibold mb-6 text-center">Overview</h2>
-        <p className="text-gray-300 text-lg leading-relaxed">
+        <p className="text-gray-300 text-[17px] leading-relaxed">
           The Turbo Trade Strategy is a long-term investment framework designed
           for individuals who aspire to build sustainable wealth and a strong
           portfolio over a period of 1 year and beyond. Unlike short-term plans

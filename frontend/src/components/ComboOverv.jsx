@@ -18,10 +18,10 @@ const ComboOverv = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-6 sm:px-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4">
             Combo Plan: Alpha + Turbo Strategy
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mb-6">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mb-6">
             A dual strategy capturing quick short-term profits while building
             long-term wealth — the best of both Alpha Move and Turbo Trade.
           </p>
@@ -40,7 +40,7 @@ const ComboOverv = () => {
         className="max-w-5xl mx-auto py-16 px-6 sm:px-12 lg:px-20"
       >
         <h2 className="text-3xl font-semibold mb-6 text-center">Overview</h2>
-        <p className="text-gray-300 text-lg leading-relaxed">
+        <p className="text-gray-300 text-[17px] leading-relaxed">
           The Alpha + Turbo Combo Strategy is a comprehensive investment plan
           that combines the strengths of both short-term and long-term
           strategies. It is designed for investors who wish to maximize

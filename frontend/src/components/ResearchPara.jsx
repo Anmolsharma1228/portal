@@ -68,7 +68,7 @@ const ResearchPara = () => {
   return (
     <div id="/#ResearchPara" className="bg-gradient-to-r from-black via-gray-900 to-black px-6 sm:px-10 lg:px-20 py-20 text-gray-100 mt-10">
       {/* Title */}
-      <h1 className="text-center text-4xl font-extrabold text-yellow-500 mb-12">
+      <h1 className="text-center text-2xl font-extrabold text-yellow-500 mb-12">
         Research Parameters
       </h1>
 
