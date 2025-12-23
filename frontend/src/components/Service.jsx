@@ -83,7 +83,7 @@ const ServiceCard = ({ service, isOpen, setOpen }) => {
         <h3 className={`text-xl font-semibold ${text}`}>{title}</h3>
         <p className="mt-3 text-gray-400 text-[16px]">{desc}</p>
         <div
-          className={`absolute inset-0 opacity-0 group-hover:opacity-20 bg-gradient-to-tr ${glow} to-transparent blur-2xl transition`}
+          className={`absolute inset-0 opacity-0 group-hover:opacity-20 bg-linear-to-tr ${glow} to-transparent blur-2xl transition`}
         ></div>
       </div>
 
@@ -156,8 +156,8 @@ const Service = () => {
   const [open, setOpen] = useState(null);
 
   return (
-    <section className="bg-gradient-to-r from-black via-[#0f172a] to-black text-white py-12">
-      <h1 className="text-center font-bold text-xl md:text-[35px] mb-8 text-yellow-500 tracking-wide">
+    <section className="bg-linear-to-r from-black via-[#0f172a] to-black text-white py-12">
+      <h1 className="text-center font-bold text-[23px] md:text-[35px] mb-8 text-yellow-500 tracking-wide">
         Services
       </h1>
 

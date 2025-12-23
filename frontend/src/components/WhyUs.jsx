@@ -23,7 +23,7 @@ const WhyUs = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
   >
-      <h2 className="text-3xl font-bold text-yellow-400 mb-10">
+      <h2 className="text-[23px] sm:text-[35px] font-bold text-yellow-400 mb-10">
         Why Choose <span className="text-white">Behind The Profit?</span>
       </h2>
       <div className="grid md:grid-cols-3 gap-8">

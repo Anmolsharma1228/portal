@@ -66,7 +66,7 @@ const sections = [
 
 const ResearchPara = () => {
   return (
-    <div id="/#ResearchPara" className="bg-gradient-to-r from-black via-gray-900 to-black px-6 sm:px-10 lg:px-20 py-20 text-gray-100 mt-10">
+    <div id="/#ResearchPara" className="bg-linear-to-r from-black via-gray-900 to-black px-6 sm:px-10 lg:px-20 py-20 text-gray-100 mt-10">
       {/* Title */}
       <h1 className="text-center text-2xl font-extrabold text-yellow-500 mb-12">
         Research Parameters
@@ -108,7 +108,7 @@ const ResearchPara = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
         viewport={{ once: true }}
-        className="mt-16 bg-gradient-to-r from-yellow-600/20 via-gray-800 to-yellow-600/20 p-8 rounded-2xl shadow-xl text-center"
+        className="mt-16 bg-linear-to-r from-yellow-600/20 via-gray-800 to-yellow-600/20 p-8 rounded-2xl shadow-xl text-center"
       >
         <h2 className="text-2xl font-bold text-yellow-400 mb-4">
           Our Commitment to Research Excellence

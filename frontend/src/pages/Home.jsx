@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col mt-22">
       {/* Main Content */}
-      <main className="flex-grow w-full mx-auto">
+      <main className="grow w-full mx-auto">
         <section className="space-y-10">
           {/* Intro Section */}
           <div className="px-2 sm:px-10 grid items-center md:grid-cols-2 gap-8 bg-black">
@@ -56,7 +56,7 @@ const Home = () => {
               <img
                 src={stock}
                 alt="Stock market dashboard"
-                className="rounded-lg shadow-lg h-[450px] w-full object-cover"
+                className="rounded-lg shadow-lg h-112.5 w-full object-cover"
               />
             </motion.div>
           </div>
@@ -75,7 +75,7 @@ const Home = () => {
         <section className="bg-gray-800 py-10">
           <div className="py-5 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-20">
             {/* Title */}
-            <h1 className="text-center text-lg sm:text-[35px] font-bold text-yellow-500 mb-6">
+            <h1 className="text-center text-[23px] sm:text-[35px] font-bold text-yellow-500 mb-6">
               Research Parameters
             </h1>
 
