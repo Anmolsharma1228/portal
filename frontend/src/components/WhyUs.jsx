@@ -23,8 +23,8 @@ const WhyUs = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
   >
-      <h2 className="text-[23px] sm:text-[35px] font-bold text-yellow-400 mb-10">
-        Why Choose <span className="text-white">Behind The Profit?</span>
+      <h2 className="text-[23px] sm:text-[35px] font-bold text-[#16A085] mb-10">
+        Why Choose <span className="text-[#0F172A]">Behind The Profit?</span>
       </h2>
       <div className="grid md:grid-cols-3 gap-8">
         {features.map((item, idx) => (
@@ -33,10 +33,10 @@ const WhyUs = () => {
             className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-yellow-500/20 transition"
           >
             <div className="flex justify-center mb-4">{item.icon}</div>
-            <h3 className="text-xl font-semibold text-white mb-2">
+            <h3 className="text-xl font-semibold text-[#16A085] mb-2">
               {item.title}
             </h3>
-            <p className="text-gray-400">{item.desc}</p>
+            <p className="text-[#E5E7EB]">{item.desc}</p>
           </div>
         ))}
       </div>

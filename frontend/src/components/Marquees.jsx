@@ -36,13 +36,13 @@ export const Marquees = () => {
   }, []);
 
   return (
-    <div className="bg-gray-900 py-3">
+    <div className="bg-[#F2F2F2] py-3">
       <Marquee gradient={false} speed={60}>
         {stocks.length > 0 ? (
           stocks.map((stock, idx) => (
             <div
               key={idx}
-              className="mx-6 font-semibold text-yellow-400 flex items-center space-x-2"
+              className="mx-6 font-semibold text-[#E74C3C] flex items-center space-x-2"
             >
               <span>{stock.symbol}:</span>
               <span>${stock.price.toFixed(2)}</span>

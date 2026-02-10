@@ -62,7 +62,7 @@ const AlphaOverv = () => {
   return (
     <section className="text-white bg-gray-900">
       {/* Hero / Banner Section */}
-      <div className="relative w-full h-[500px] sm:h-[600px] lg:h-[700px]">
+      <div className="relative w-full h-125 sm:h-150 lg:h-175">
         <img
           src="https://source.unsplash.com/1600x900/?finance,stocks,money"
           alt="Finance Hero"

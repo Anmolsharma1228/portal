@@ -73,7 +73,7 @@ const ServiceCard = ({ service, isOpen, setOpen }) => {
     >
       {/* Card front */}
       <div
-        className={`relative h-full px-6 py-12 rounded-2xl shadow-lg bg-gray-900 overflow-hidden border border-gray-800 ${glow} hover:-translate-y-2 transition duration-300 group`}
+        className={`relative h-full px-6 py-12 rounded-2xl shadow-lg bg-[#020617] overflow-hidden border border-gray-800 ${glow} hover:-translate-y-2 transition duration-300 group`}
       >
         <div className="flex justify-center items-center mb-6">
           <Icon
@@ -81,7 +81,7 @@ const ServiceCard = ({ service, isOpen, setOpen }) => {
           />
         </div>
         <h3 className={`text-xl font-semibold ${text}`}>{title}</h3>
-        <p className="mt-3 text-gray-400 text-[16px]">{desc}</p>
+        <p className="mt-3 text-[#E5E7EB] text-[16px]">{desc}</p>
         <div
           className={`absolute inset-0 opacity-0 group-hover:opacity-20 bg-linear-to-tr ${glow} to-transparent blur-2xl transition`}
         ></div>
@@ -156,8 +156,8 @@ const Service = () => {
   const [open, setOpen] = useState(null);
 
   return (
-    <section className="bg-linear-to-r from-black via-[#0f172a] to-black text-white py-12">
-      <h1 className="text-center font-bold text-[23px] md:text-[35px] mb-8 text-yellow-500 tracking-wide">
+    <section className="py-12">
+      <h1 className="text-center font-bold text-[23px] md:text-[35px] mb-8 text-[#0F172A] tracking-wide">
         Services
       </h1>
 

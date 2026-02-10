@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { Phone } from "lucide-react";
 import { MarqueeHeadline } from "./Marquees";
-import logo2 from "../assets/Images/logo2.png";
+import logo3 from "../assets/Images/logo3.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,17 +20,17 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="bg-black/60 backdrop-blur-lg w-full fixed top-0 right-0 left-0 mx-auto z-10 h-[100px] md:h-[110px] shadow-md">
-      <MarqueeHeadline />
+    <header className="bg-[#F2F2F2] w-full fixed top-0 right-0 left-0 mx-auto z-10 h-20">
+      {/* <MarqueeHeadline /> */}
 
-      <nav className="flex justify-between items-center mx-4 mt-[-20px]">
+      <nav className="flex justify-between items-center mx-4 -mt-5">
         {/* Logo */}
-        <div className="flex items-center ml-[-28px]">
+        <div className="flex items-center -ml-7">
           <NavLink to="/">
             <img
-              src={logo2}
+              src={logo3}
               alt="Logo"
-              className="w-[100px] sm:w-[130px] h-auto object-contain"
+              className="w-25 sm:w-32.5 h-auto object-contain"
             />
           </NavLink>
         </div>
@@ -43,15 +43,15 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="md:space-x-6 lg:text-[16px] font-semibold hidden md:block">
+        <div className="rounded-full bg-[#0F172A] px-4 py-3 md:space-x-6 lg:text-[16px] font-semibold hidden md:block">
           {menuItems.map((item, index) => (
             <NavLink
               key={index}
               to={item.to}
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#FFD700]"
-                  : "text-white hover:text-[#FFD700] transition-colors duration-300"
+                  ? "text-[#16A085]"
+                  : "text-[#CBD5E1] hover:text-[#16A085] transition-colors duration-300"
               }
             >
               {item.label}
@@ -61,7 +61,7 @@ export const Navbar = () => {
 
         {/* Call Info */}
         <div className="text-white space-x-4 lg:text-[16px] text-[17px] hidden sm:block font-semibold">
-          <p className="flex items-center text-[#FFD700]">
+          <p className="flex items-center text-[#16A085]">
             <Phone className="mr-1" />  +918126816165
           </p>
         </div>
@@ -69,7 +69,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="sm:hidden absolute top-[100px] left-0 w-full bg-gradient-to-r from-black via-[#0f172a] to-black z-20 transition-all duration-500 ease-in-out">
+        <div className="sm:hidden absolute top-25 left-0 w-full bg-linear-to-r from-black via-[#0f172a] to-black z-20 transition-all duration-500 ease-in-out">
           <div className="text-white ml-5 flex flex-col items-start justify-start space-y-2 py-2 lg:text-[18px]">
             {menuItems.map((item, index) => (
               <NavLink

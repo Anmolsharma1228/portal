@@ -79,11 +79,11 @@ const ContactUs = () => {
   return (
   <section className="relative w-full flex flex-col items-center justify-center px-3 sm:px-6 py-10">
     {/* Heading */}
-    <h1 className="text-center text-[23px] sm:text-[35px] font-bold text-yellow-400">
+    <h1 className="text-center text-[23px] sm:text-[35px] font-bold text-[#0F172A]">
       Contact Us
     </h1>
-    <p className="text-center text-gray-300 text-sm sm:text-base mt-2 mb-8 max-w-xl">
-      Get a callback from our research team within <span className="text-yellow-400 font-semibold">24 hours</span>.
+    <p className="text-center text-[] text-sm sm:text-base mt-2 mb-8 max-w-xl">
+      Get a callback from our research team within <span className="text-[#16A085] font-semibold">24 hours</span>.
     </p>
 
     {/* Form Card */}
@@ -170,7 +170,7 @@ const ContactUs = () => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-linear-to-r from-yellow-500 to-yellow-400 
+          className="w-full bg-[#16A085] 
           text-black py-3 rounded-lg text-sm font-semibold
           transition hover:scale-[1.02] hover:shadow-lg disabled:opacity-50"
         >
