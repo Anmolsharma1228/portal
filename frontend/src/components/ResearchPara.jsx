@@ -66,9 +66,9 @@ const sections = [
 
 const ResearchPara = () => {
   return (
-    <div id="/#ResearchPara" className="bg-linear-to-r from-black via-gray-900 to-black px-6 sm:px-10 lg:px-20 py-20 text-gray-100 mt-10">
+    <div id="/#ResearchPara" className="px-6 sm:px-10 lg:px-20 py-20 text-gray-100 mt-10">
       {/* Title */}
-      <h1 className="text-center text-2xl font-extrabold text-[#003366] mb-12">
+      <h1 className="text-center text-3xl font-extrabold text-[#0F172A] mb-12">
         Research Parameters
       </h1>
 
@@ -86,18 +86,18 @@ const ResearchPara = () => {
             {/* Icon + Title */}
             <div className="flex items-center gap-3 mb-4">
               {sec.icon}
-              <h2 className="text-xl font-semibold text-yellow-400">
+              <h2 className="text-xl font-semibold text-[#16A085]">
                 {sec.title}
               </h2>
             </div>
 
             {/* Content */}
-            <ul className="list-disc list-inside space-y-1 text-gray-300">
+            <ul className="list-disc list-inside space-y-1 text-[#CBD5E1]">
               {sec.points.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>
-            <p className="mt-3 text-gray-400">{sec.desc}</p>
+            <p className="mt-3 text-[#CBD5E1]">{sec.desc}</p>
           </motion.div>
         ))}
       </div>
@@ -108,16 +108,16 @@ const ResearchPara = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
         viewport={{ once: true }}
-        className="mt-16 bg-linear-to-r from-yellow-600/20 via-gray-800 to-yellow-600/20 p-8 rounded-2xl shadow-xl text-center"
+        className="mt-16 bg-[#0F172A] p-8 rounded-2xl shadow-xl text-center"
       >
-        <h2 className="text-2xl font-bold text-yellow-400 mb-4">
+        <h2 className="text-2xl font-bold text-[#16A085] mb-4">
           Our Commitment to Research Excellence
         </h2>
-        <p className="text-gray-300 leading-relaxed">
-          At <span className="font-semibold text-yellow-400">Behind The Profit</span>, 
+        <p className="text-[#CBD5E1] leading-relaxed">
+          At <span className="font-semibold text-[#16A085]">Behind The Profit</span>, 
           research is not just a process—it is our core strength. Each recommendation 
           is backed by rigorous analysis, blending quantitative models with qualitative insights. 
-          We stay updated with evolving market conditions, ensuring <span className="text-yellow-400">accuracy, reliability, and transparency</span> 
+          We stay updated with evolving market conditions, ensuring <span className="text-[#16A085]">accuracy, reliability, and transparency</span> 
           so that investors gain clarity, confidence, and opportunities they deserve.
         </p>
       </motion.div>
