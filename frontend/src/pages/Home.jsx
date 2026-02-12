@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import hero2 from "../assets/Images/hero2.png";
+import hero3 from "../assets/Images/hero3.png";
 import WhyUs from "../components/WhyUs";
 import Service from "../components/Service";
 import { Marquees } from "../components/Marquees";
@@ -54,7 +54,7 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <img
-                src={hero2}
+                src={hero3}
                 alt="Stock market dashboard"
                 className=" h-135 w-full object-cover"
               />
