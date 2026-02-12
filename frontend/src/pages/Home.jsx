@@ -56,7 +56,7 @@ const Home = () => {
               <img
                 src={hero2}
                 alt="Stock market dashboard"
-                className=" h-135 w-full object-cover pr-12 sm:pr-0"
+                className=" h-135 w-full object-cover"
               />
             </motion.div>
           </div>
