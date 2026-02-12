@@ -60,25 +60,25 @@ const howItWorks = [
 
 const TurboOverv = () => {
   return (
-    <section className="text-white bg-gray-900">
+    <section className="text-white">
       {/* Hero / Banner Section */}
-      <div className="relative w-full h-[500px] sm:h-[600px] lg:h-[700px]">
+      <div className="relative w-full h-125 sm:h-150 lg:h-175">
         <img
           src="https://source.unsplash.com/1600x900/?investment,finance,stocks"
           alt="Turbo Trade Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-6 sm:px-12">
-          <h1 className="text-3xl sm:text-5xl font-bold mb-4">
+        <div className="absolute inset-0 bg-[#0F172A] bg-opacity-60 flex flex-col justify-center items-center text-center px-6 sm:px-12">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4 text-[#16A085]">
             Turbo Trade Strategy
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-6">
+          <p className="text-lg sm:text-xl text-[#CBD5E1] max-w-2xl mb-6">
             A long-term investment approach for building sustainable wealth over
             1 year and beyond.
           </p>
           <a
            href="#features"
-            className="bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-full hover:bg-yellow-400 transition-colors duration-300"
+            className="bg-linear-to-r from-[#CBD5E1] to-[#16A085] text-[#333333] font-semibold py-3 px-6 rounded-full transition-colors duration-300"
           >
             Get Started
           </a>
@@ -87,8 +87,8 @@ const TurboOverv = () => {
 
       {/* Overview */}
       <div className="max-w-4xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-6 text-center">Overview</h2>
-        <p className="text-gray-300 text-[17px] leading-relaxed">
+        <h2 className="text-3xl font-semibold mb-6 text-center text-[#0F172A]">Overview</h2>
+        <p className="text-[#333] text-lg leading-relaxed">
           The Turbo Trade Strategy is a long-term investment framework designed
           for individuals who aspire to build sustainable wealth and a strong
           portfolio over a period of 1 year and beyond. Unlike short-term plans
@@ -97,7 +97,7 @@ const TurboOverv = () => {
           wealth-compounding opportunities that can deliver exponential growth
           over time.
         </p>
-        <p className="text-gray-300 text-lg leading-relaxed mt-4">
+        <p className="text-[#333] text-lg leading-relaxed mt-4">
           This strategy recognizes that time in the market is often more
           powerful than timing the market. By adopting a disciplined,
           research-backed, and patient investment approach, Turbo Trade enables
@@ -111,7 +111,7 @@ const TurboOverv = () => {
         id="features"
         className="max-w-6xl mx-auto py-20 px-6 sm:px-12 lg:px-20"
       >
-        <h2 className="text-3xl font-semibold mb-10 text-center">
+        <h2 className="text-3xl font-semibold mb-10 text-center text-[#0F172A]">
           Key Features
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -127,8 +127,8 @@ const TurboOverv = () => {
                 loading="lazy"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.desc}</p>
+                <h3 className="text-xl font-bold mb-2 text-[#16A085]">{feature.title}</h3>
+                <p className="text-[#CBD5E1]">{feature.desc}</p>
               </div>
             </div>
           ))}
@@ -137,7 +137,7 @@ const TurboOverv = () => {
 
       {/* How It Works */}
       <div className="max-w-6xl mx-auto mb-16 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">
+        <h2 className="text-3xl font-semibold mb-10 text-center text-[#0F172A]">
           How the Strategy Works
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -146,8 +146,8 @@ const TurboOverv = () => {
               key={idx}
               className="bg-gray-800 rounded-lg p-6 shadow-lg hover:scale-105 transition-transform duration-300"
             >
-              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-              <p className="text-gray-300">{step.desc}</p>
+              <h3 className="text-xl font-bold mb-2 text-[#16A085]">{step.title}</h3>
+              <p className="text-[#CBD5E1]">{step.desc}</p>
              
             </div>
           ))}
@@ -156,7 +156,7 @@ const TurboOverv = () => {
 
       {/* Benefits */}
       <div className="max-w-6xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">
+        <h2 className="text-3xl font-semibold mb-10 text-center text-[#0F172A]">
           Benefits of Turbo Trade Strategy
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
@@ -165,7 +165,7 @@ const TurboOverv = () => {
             alt="Benefits"
             className="w-full md:w-1/2 h-6/12 object-cover rounded-lg shadow-lg"
           />
-          <ul className="list-disc list-inside space-y-4 text-gray-300 text-lg md:w-1/2">
+          <ul className="list-disc list-inside space-y-4 text-[#333] text-lg md:w-1/2">
             <li>
               Wealth Creation Over Time: Ideal for those who want to grow wealth
               steadily without chasing short-lived gains.
@@ -192,7 +192,7 @@ const TurboOverv = () => {
 
       {/* Who Should Choose */}
       <div className="max-w-6xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">
+        <h2 className="text-3xl font-semibold mb-10 text-center text-[#0F172A]">
           Who Should Choose Turbo Trade Strategy?
         </h2>
         <div className="flex flex-col md:flex-row-reverse items-center gap-8">
@@ -201,7 +201,7 @@ const TurboOverv = () => {
             alt="Who Should Choose"
             className="w-full md:w-1/2 h-6/12 object-cover rounded-lg shadow-lg"
           />
-          <ul className="list-disc list-inside space-y-4 text-gray-300 text-lg md:w-1/2">
+          <ul className="list-disc list-inside space-y-4 text-[#333] text-lg md:w-1/2">
             <li>Investors with a long-term vision for wealth building.</li>
             <li>
               Individuals aiming to create a robust portfolio for financial
@@ -220,9 +220,9 @@ const TurboOverv = () => {
       </div>
 
       {/* Conclusion */}
-      <div className="max-w-4xl mx-auto text-gray-300 text-center py-20 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-4">Conclusion</h2>
-        <p className="text-lg leading-relaxed">
+      <div className="max-w-4xl mx-auto text-center py-20 px-6 sm:px-12 lg:px-20">
+        <h2 className="text-3xl font-semibold mb-4 text-[#0F172A]">Conclusion</h2>
+        <p className="text-lg leading-relaxed text-[#333]">
           The Turbo Trade Strategy is more than just an investment plan — it is
           a roadmap to financial independence and wealth creation. By focusing
           on long-term opportunities, fundamentally strong companies, and the

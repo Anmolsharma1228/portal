@@ -15,7 +15,7 @@ const fadeInUp = {
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col mt-20">
+    <div className="min-h-screen flex flex-col mt-22">
       {/* Main Content */}
       <main className="grow w-full mx-auto">
         <section className="space-y-10">
@@ -31,19 +31,19 @@ const Home = () => {
               <h2 className="text-xl sm:text-2xl font-bold text-[#003366]">
                 Decode the Market with Behind The Profit
               </h2>
-              <p className="mt-4 text-[#333333] text-[16px] leading-relaxed">
+              <p className="mt-4 text-[#2F2F2F] text-[16px] leading-relaxed">
                 Welcome to{" "}
                 <span className="text-[#003366] font-semibold">
                   Behind The Profit
                 </span>
                 , your trusted partner in navigating the financial markets.
                 Whether you’re a beginner or a seasoned investor, we provide
-                <span className="text-[#333333]">
+                <span className="text-green-500">
                   {" "}
                   research-backed strategies
                 </span>
                 , market insights, and personalized guidance to help you achieve
-                <span className="text-[#2F2F2F]"> consistent returns</span>.
+                <span className="text-green-400"> consistent returns</span>.
               </p>
             </motion.div>
 
@@ -56,7 +56,7 @@ const Home = () => {
               <img
                 src={hero}
                 alt="Stock market dashboard"
-                className="h-112.5 w-full object-cover"
+                className=" h-112.5 w-full object-cover pr-24 sm:pr-0"
               />
             </motion.div>
           </div>
@@ -68,7 +68,7 @@ const Home = () => {
         </section>
 
         {/* Service Section */}
-        <section id="Services" className="bg-[#F2F2F2]">
+        <section id="Services">
           <Service />
         </section>
         {/* Research Parameters Section */}
@@ -80,7 +80,7 @@ const Home = () => {
             </h1>
 
             {/* Paragraph */}
-            <p className="max-w-3xl text-base sm:text-lg text-[#94A3B8] leading-relaxed text-justify">
+            <p className="max-w-3xl text-base sm:text-lg text-[#333333] leading-relaxed text-justify">
               At{" "}
               <span className="font-semibold text-[#16A085]">
                 Behind The Profit

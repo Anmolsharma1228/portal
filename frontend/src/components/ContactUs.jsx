@@ -82,7 +82,7 @@ const ContactUs = () => {
     <h1 className="text-center text-[23px] sm:text-[35px] font-bold text-[#0F172A]">
       Contact Us
     </h1>
-    <p className="text-center text-[] text-sm sm:text-base mt-2 mb-8 max-w-xl">
+    <p className="text-center text-[#2F2F2F] text-sm sm:text-base mt-2 mb-8 max-w-xl">
       Get a callback from our research team within <span className="text-[#16A085] font-semibold">24 hours</span>.
     </p>
 
@@ -103,10 +103,10 @@ const ContactUs = () => {
             onChange={handlechange}
             className="w-full bg-white text-gray-900 border border-gray-300 
             rounded-lg px-3 py-2 text-sm outline-none
-            focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition"
+            focus:border-[#16A085] focus:ring-2 focus:ring-[#16A085] transition"
             placeholder="Enter your full name"
           />
-          {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
+          {errors.name && <p className="text-[#2F2F2F] text-xs mt-1">{errors.name}</p>}
         </div>
 
         {/* Email */}
@@ -119,10 +119,10 @@ const ContactUs = () => {
             onChange={handlechange}
             className="w-full bg-white text-gray-900 border border-gray-300 
             rounded-lg px-3 py-2 text-sm outline-none
-            focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition"
+            focus:border-[#16A085] focus:ring-2 focus:ring-[#16A085] transition"
             placeholder="you@example.com"
           />
-          {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+          {errors.email && <p className="text-[#2F2F2F] text-xs mt-1">{errors.email}</p>}
         </div>
 
         {/* Number */}
@@ -135,10 +135,10 @@ const ContactUs = () => {
             onChange={handlechange}
             className="w-full bg-white text-gray-900 border border-gray-300 
             rounded-lg px-3 py-2 text-sm outline-none
-            focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition"
+            focus:border-[#16A085] focus:ring-2 focus:ring-[#16A085] transition"
             placeholder="10-digit mobile number"
           />
-          {errors.number && <p className="text-red-500 text-xs mt-1">{errors.number}</p>}
+          {errors.number && <p className="text-[#2F2F2F] text-xs mt-1">{errors.number}</p>}
         </div>
 
         {/* Message */}
@@ -150,13 +150,13 @@ const ContactUs = () => {
             onChange={handlechange}
             className="w-full bg-white text-gray-900 border border-gray-300 
             rounded-lg px-3 py-2 text-sm h-28 outline-none
-            focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition"
+            focus:border-[#16A085] focus:ring-2 focus:ring-[#16A085] transition"
             placeholder="How can we help you?"
           />
           <p className="text-xs text-gray-400 text-right mt-1">
             {contactdata.message.length}/200
           </p>
-          {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
+          {errors.message && <p className="text-[#2F2F2F] text-xs">{errors.message}</p>}
         </div>
 
         {/* Status */}

@@ -36,7 +36,7 @@ const WhyUs = () => {
             <h3 className="text-xl font-semibold text-[#16A085] mb-2">
               {item.title}
             </h3>
-            <p className="text-[#E5E7EB]">{item.desc}</p>
+            <p className="text-[#E0E0E0]">{item.desc}</p>
           </div>
         ))}
       </div>

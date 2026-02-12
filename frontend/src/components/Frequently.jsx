@@ -18,14 +18,14 @@ const Frequently = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8 text-white">
-      <h2 className="flex justify-center text-3xl font-bold text-center mb-6"><Pin className='text-[red] size-[40px] rotate-[45deg]'/> Frequently Asked Questions</h2>
+    <div className="max-w-3xl mx-auto px-4 py-8 text-white mt-14">
+      <h2 className="text-[#020617] flex justify-center gap-4 text-3xl font-bold text-center mb-6"><Pin className=' size-10 rotate-45'/> Frequently Asked Questions</h2>
 
       {faqs.map((faq, index) => (
         <div key={index} className="border-b border-gray-300 py-4">
           <div
             onClick={() => toggle(index)}
-            className="flex justify-between items-center cursor-pointer"
+            className="flex justify-between items-center cursor-pointer text-[#020617]"
           >
             <h3 className="text-lg font-medium">{faq.question}</h3>
             {openIndex === index ? <FaMinus className="w-5 h-5" /> : <FaPlus className="w-5 h-5" />}
@@ -36,7 +36,7 @@ const Frequently = () => {
               openIndex === index ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'
             }`}
           >
-            <p className="text-gray-500">{faq.answer}</p>
+            <p className="text-[#16A085]">{faq.answer}</p>
           </div>
         </div>
       ))}

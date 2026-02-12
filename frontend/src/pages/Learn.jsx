@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import stock from "../assets/Images/stock.png";
 import { Book, Video } from "lucide-react";
+import { TbChartInfographic } from "react-icons/tb";
 import Frequently from "../components/Frequently";
 
 const topics = [
@@ -106,8 +107,8 @@ const Learn = () => {
 
   return (
   <div className="p-4 max-w-5xl mx-auto mt-38 min-h-screen">
-  <h1 className="flex justify-center text-3xl font-bold mb-6 text-center text-red-500">
-    <Book className="text-red-500 size-[40px] stroke-3"/> Learn About the Stock Market
+  <h1 className="flex justify-center gap-4 text-3xl font-bold mb-6 text-center text-[#020617]">
+    <Book className="size-10 stroke-3 text-[#16A085]"/> Learn About the Stock Market
   </h1>
 
   <input
@@ -115,28 +116,28 @@ const Learn = () => {
     placeholder="Search a term like 'IPO' or 'Mutual Fund'..."
     value={search}
     onChange={(e) => setSearch(e.target.value)}
-    className="w-full p-2 border border-red-500 bg-gray-900 text-white rounded-lg mb-6 shadow-md focus:ring-2 focus:ring-red-500 outline-none"
+    className="w-full p-2 border border-[#CBD5E1] bg-gray-900 text-white rounded-lg mb-6 shadow-md focus:ring-2 focus:ring-[#16A085] outline-none"
   />
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
     {filteredTopics.map((topic, index) => (
       <div
         key={index}
-        className="bg-gray-900 text-gray-100 p-4 rounded-xl shadow-md hover:shadow-red-500/50 transition"
+        className="bg-gray-900 p-4 rounded-xl shadow-md hover:shadow-red-500/50 transition"
       >
-        <h2 className="text-lg font-semibold mb-2 text-red-400">{topic.title}</h2>
-        <p className="text-md">{topic.content}</p>
+        <h2 className="text-lg font-semibold mb-2 text-[#16A085]">{topic.title}</h2>
+        <p className="text-md text-[#CBD5E1]">{topic.content}</p>
       </div>
     ))}
   </div>
 
-  <div className="mt-12">
-    <h2 className="flex items-center text-2xl font-bold mb-4 text-red-500">
-      <Video className="mx-1 size-[36px]"/> Watch Explainer Video
+  <div className="mt-14">
+    <h2 className="flex items-center gap-4 text-2xl font-bold mb-4 text-[#020617]">
+      <Video className="mx-1 size-9 text-[#16A085]"/> Watch Explainer Video
     </h2>
     <div className="aspect-w-16 aspect-h-9">
       <iframe
-        className="w-full h-64 rounded-lg border-2 border-red-500"
+        className="w-full h-64 rounded-lg border-2 border-[#16A085]"
         src="https://www.youtube.com/embed/p7HKvqRI_Bo"
         title="What is the Stock Market?"
         allowFullScreen
@@ -144,12 +145,14 @@ const Learn = () => {
     </div>
   </div>
 
-  <div className="mt-12">
-    <h2 className="text-2xl font-bold mb-4 text-red-500">📊 Infographics</h2>
+  <div className="mt-14">
+    <h2 className="flex items-center gap-4 text-2xl font-bold mb-4 text-[#020617]">
+      <TbChartInfographic className="mx-1 size-9 text-[#16A085]"/> Infographics
+    </h2>
     <img
       src={stock}
       alt="Stock Market Flow"
-      className="w-full rounded-lg shadow-red-500/50 border border-red-500"
+      className="w-full rounded-lg shadow-red-500/50 border border-[#16A085]"
     />
   </div>
   <Frequently />

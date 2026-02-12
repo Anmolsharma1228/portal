@@ -60,7 +60,7 @@ const howItWorks = [
 
 const AlphaOverv = () => {
   return (
-    <section className="text-white bg-gray-900">
+    <section className="text-whit">
       {/* Hero / Banner Section */}
       <div className="relative w-full h-125 sm:h-150 lg:h-175">
         <img
@@ -68,18 +68,18 @@ const AlphaOverv = () => {
           alt="Finance Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-6 sm:px-12">
-          <h1 className="text-3xl sm:text-5xl font-bold mb-4">
+        <div className="absolute inset-0 bg-[#0F172A] bg-opacity-60 flex flex-col justify-center items-center text-center px-6 sm:px-12">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4 text-[#16A085]">
             Alpha Move Strategy
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-6">
+          <p className="text-lg sm:text-xl text-[#CBD5E1] max-w-2xl mb-6">
             A short-term investment approach for high returns within 6
             months, leveraging market momentum, trend shifts, and growth
             catalysts.
           </p>
           <a
             href="#features"
-            className="bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-full hover:bg-yellow-400 transition-colors duration-300"
+            className="bg-linear-to-r from-[#CBD5E1] to-[#16A085] text-[#333333] font-semibold py-3 px-6 rounded-full transition-colors duration-300"
           >
             Get Started
           </a>
@@ -88,8 +88,8 @@ const AlphaOverv = () => {
 
       {/* Overview */}
       <div className="max-w-4xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-6 text-center">Overview</h2>
-        <p className="text-gray-300 text-[17px] leading-relaxed">
+        <h2 className="text-3xl font-semibold mb-6 text-center text-[#0F172A]">Overview</h2>
+        <p className="text-[#333333] text-lg leading-relaxed">
           The Alpha Move Strategy is a carefully crafted short-term investment
           approach designed for individuals who aim to maximize returns within a
           defined period of 6 to 12 months. Unlike traditional long-term
@@ -98,7 +98,7 @@ const AlphaOverv = () => {
           trend shifts, and growth catalysts align to deliver potential
           outperformance, or what we call alpha.
         </p>
-        <p className="text-gray-300 text-lg leading-relaxed mt-4">
+        <p className="text-[#333333] text-lg leading-relaxed mt-4">
           In today’s fast-paced financial markets, short-term opportunities
           often arise due to changing economic conditions, quarterly earnings,
           sectoral trends, or government policy shifts. The Alpha Move Strategy
@@ -112,7 +112,7 @@ const AlphaOverv = () => {
         id="features"
         className="max-w-6xl mx-auto py-20 px-6 sm:px-12 lg:px-20"
       >
-        <h2 className="text-3xl font-semibold mb-10 text-center">
+        <h2 className="text-3xl font-semibold mb-10 text-center text-[#0F172A]">
           Key Features
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -128,8 +128,8 @@ const AlphaOverv = () => {
                 loading="lazy"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.desc}</p>
+                <h3 className="text-xl font-bold mb-2 text-[#16A085]">{feature.title}</h3>
+                <p className="text-[#CBD5E1]">{feature.desc}</p>
               </div>
             </div>
           ))}
@@ -138,7 +138,7 @@ const AlphaOverv = () => {
 
        {/* How It Works */}
       <div className="max-w-6xl mx-auto mb-16 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">
+        <h2 className="text-3xl font-semibold mb-10 text-center text-[#0F172A]">
           How the Strategy Works
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -147,8 +147,8 @@ const AlphaOverv = () => {
               key={idx}
               className="bg-gray-800 rounded-lg p-6 shadow-lg hover:scale-105 transition-transform duration-300"
             >
-              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-              <p className="text-gray-300">{step.desc}</p>
+              <h3 className="text-xl font-bold mb-2 text-[#16A085]">{step.title}</h3>
+              <p className="text-[#CBD5E1]">{step.desc}</p>
              
             </div>
           ))}
@@ -157,7 +157,7 @@ const AlphaOverv = () => {
 
       {/* Why Choose This Strategy with images */}
       <div className="max-w-6xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">
+        <h2 className="text-3xl font-semibold mb-10 text-center text-[#0F172A]">
           Why Choose This Strategy?
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
@@ -166,7 +166,7 @@ const AlphaOverv = () => {
             alt="Why Choose"
             className="w-full md:w-1/2 h-6/12 object-cover rounded-lg shadow-lg"
           />
-          <ul className="list-disc list-inside space-y-4 text-gray-300 text-lg md:w-1/2">
+          <ul className="list-disc list-inside space-y-4 text-[#333] text-lg md:w-1/2">
             <li>
               <strong>Short-Term Commitment:</strong> Achieve returns within
               6–12 months.
@@ -192,7 +192,7 @@ const AlphaOverv = () => {
 
       {/* Who Should Opt with images */}
       <div className="max-w-6xl mx-auto py-16 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-10 text-center">
+        <h2 className="text-3xl font-semibold mb-10 text-center text-[#0F172A]">
           Who Should Opt for This Strategy?
         </h2>
         <div className="flex flex-col md:flex-row-reverse items-center gap-8">
@@ -201,7 +201,7 @@ const AlphaOverv = () => {
             alt="Who Should Opt"
             className="w-full md:w-1/2 h-6/12 object-cover rounded-lg shadow-lg"
           />
-          <ul className="list-disc list-inside space-y-4 text-gray-300 text-lg md:w-1/2">
+          <ul className="list-disc list-inside space-y-4 text-[#333] text-lg md:w-1/2">
             <li>
               Investors looking for short-term opportunities without committing
               to a multi-year horizon.
@@ -223,9 +223,9 @@ const AlphaOverv = () => {
       </div>
 
       {/* Conclusion */}
-      <div className="max-w-4xl mx-auto text-gray-300 text-center py-20 px-6 sm:px-12 lg:px-20">
-        <h2 className="text-3xl font-semibold mb-4">Conclusion</h2>
-        <p className="text-lg leading-relaxed">
+      <div className="max-w-4xl mx-auto text-center py-20 px-6 sm:px-12 lg:px-20">
+        <h2 className="text-3xl font-semibold mb-4 text-[#0F172A]">Conclusion</h2>
+        <p className="text-lg leading-relaxed text-[#333]">
           The Alpha Move Strategy bridges the gap between long-term wealth
           creation and high-frequency trading. It is an ideal short-term
           investment model for those who want to grow their wealth within a 6 to
