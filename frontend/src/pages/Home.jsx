@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import hero from "../assets/Images/hero.png";
+import hero2 from "../assets/Images/hero2.png";
 import WhyUs from "../components/WhyUs";
 import Service from "../components/Service";
 import { Marquees } from "../components/Marquees";
@@ -15,18 +15,18 @@ const fadeInUp = {
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col mt-22">
+    <div className="min-h-screen flex flex-col mt-16">
       {/* Main Content */}
       <main className="grow w-full mx-auto">
-        <section className="space-y-10">
+        <section className="">
           {/* Intro Section */}
-          <div className="px-2 sm:px-10 grid items-center md:grid-cols-2 gap-8 bg-[#F2F2F2]">
+          <div className="px-2 sm:px-10 grid items-center md:grid-cols-2 md:gap-8 bg-[#F2F2F2]">
             <motion.div
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="mt-10 mx-2"
+              className="mt-10 mx-2 md:mt-0"
             >
               <h2 className="text-xl sm:text-2xl font-bold text-[#003366]">
                 Decode the Market with Behind The Profit
@@ -54,9 +54,9 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <img
-                src={hero}
+                src={hero2}
                 alt="Stock market dashboard"
-                className=" h-112.5 w-full object-cover pr-24 sm:pr-0"
+                className=" h-135 w-full object-cover pr-12 sm:pr-0"
               />
             </motion.div>
           </div>

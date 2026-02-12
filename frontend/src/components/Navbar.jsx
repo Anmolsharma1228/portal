@@ -22,7 +22,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="bg-[#F2F2F2] backdrop-blur-lg w-full fixed top-0 right-0 left-0 mx-auto z-10 h-22">
+    <header className="bg-[#F2F2F2] backdrop-blur-lg w-full fixed top-0 right-0 left-0 mx-auto z-10 h-18">
       {/* <MarqueeHeadline /> */}
 
       <nav className="flex justify-between items-center mx-4 -mt-5">
