@@ -26,7 +26,7 @@ const Home = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="mt-10 md:mt-0"
+              className="mt-10 md:mt-0 mx-2"
             >
               <h2 className="text-xl sm:text-2xl font-bold text-[#003366]">
                 Decode the Market with Behind The Profit
@@ -52,12 +52,12 @@ const Home = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className=""
+              className="flex justify-center md:block mt-8 md:mt-0"
             >
               <img
                 src={hero}
                 alt="Stock market dashboard"
-                className=" h-115 w-full object-cover"
+                className="w-[90%] sm:w-[80%] md:w-full object-cover"
               />
             </motion.div>
           </div>
