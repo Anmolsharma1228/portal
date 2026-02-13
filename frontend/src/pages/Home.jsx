@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import hero3 from "../assets/Images/hero3.png";
+import hero from "../assets/Images/hero.png";
 import WhyUs from "../components/WhyUs";
 import Service from "../components/Service";
 import { Marquees } from "../components/Marquees";
@@ -26,7 +26,7 @@ const Home = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="mt-10 mx-2 md:mt-0"
+              className="mt-10 md:mt-0"
             >
               <h2 className="text-xl sm:text-2xl font-bold text-[#003366]">
                 Decode the Market with Behind The Profit
@@ -52,11 +52,12 @@ const Home = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+              className=""
             >
               <img
-                src={hero3}
+                src={hero}
                 alt="Stock market dashboard"
-                className=" h-135 w-full object-cover"
+                className=" h-115 w-full object-cover"
               />
             </motion.div>
           </div>
