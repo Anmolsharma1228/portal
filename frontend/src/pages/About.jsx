@@ -17,12 +17,9 @@ const About = () => {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl font-bold mb-6 pt-16"
+            className="text-3xl sm:text-4xl font-bold mb-6 pt-16 bg-clip-text text-[#020617]"
           >
-            About{" "}
-            <span className="bg-clip-text text-[#020617]">
-              Behind The Profit
-            </span>
+            About Behind The Profit
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
